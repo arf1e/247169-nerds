@@ -7,7 +7,9 @@
     <body>
         <!--Хедер-->
         <header class="main-header">
-    <img class="header-logo" src="img/headerlogo" alt="Nёrd`s">
+            <a class="header-logo" href="index.html">
+    <img class="header-logo" src="img/headerlogo.png" alt="Nёrd`s">
+            </a>
     <div class="container">
         <nav class="main-navigation">
             <ul>
@@ -18,7 +20,7 @@
                     <a href="#">Клиенты</a>
                 </li>
                 <li>
-                    <a href="catalog.html">Магазин</a>
+                    <span class="current">Магазин</span>
                 </li>
                 <li>
                     <a href="#">Контакты</a>
@@ -73,65 +75,61 @@
     </form>
     </div>  
        <!-- Товары: --> 
-    <section class="catalog-items">
+    <section class="catalog">
+      <div class="sort-container">
         <h2>Сортировать:</h2>
-        <ul class="sort">
-            <li>
-                <span class="current"> По цене </span>
-            </li>
-            <li>
+          <ul class="sort">
+              <li>
+                  <span class="current"> По цене </span>
+              </li>
+              <li>
                 <a href="#"> По типу </a>
-            </li>
-            <li>
+              </li>
+              <li>
                 <a href="#"> По названию </a>
-            </li>
-            <li>
+              </li>
+              <li>
                 <a class="sort-down current" href="#"> По убыванию </a>
-            </li>
-            <li>
+              </li>
+              <li>
                 <a class="sort-up" href="#"> По возрастанию </a>
-            </li>    
-        </ul>
-    <div class="catalog-left-column">
-        <div class="catalog-item">
-            <!--Не представляю, как сделать активный hover на этом этапе. -->
-            <figure class="active-item">
-              <img class="active-item-png" src="img/previews/sedona.jpg" alt="Sedona">
+              </li>    
+          </ul>
+        </div>
+      <section class="catalog-items">
+        <article class="catalog-item-hovered">
+              <img class="catalog-item-preview" src="img/previews/sedona.jpg" alt="Sedona">
               <div class="active-item-info">
                 <span class="catalog-item-name"> Sedona </span>
                 <p class="catalog-item-description"> Информационный сайт для туристов </p>
                 <a class="red-btn" href="#"> 9 900 руб. </a>
-            </div>
-           </figure>
-        </div>
-        <div class="catalog-item">
+              </div>
+        </article>
+        <article class="catalog-item">
           <a href="#">
             <img class="catalog-item-preview" src="img/previews/borodinski.jpg" alt="Borodinski">
           </a>
-        </div>
-        <div class="catalog-item">
-        <a href="#">
+        </article>
+        <article class="catalog-item">
+          <a href="#">
             <img class="catalog-item-preview" src="img/previews/aplus.jpg" alt="А+">
-        </a>
-        </div>
-    </div>    
-    <div class="catalog-right-column">
-        <div class="catalog-item">
+          </a>
+        </article>
+        <article class="catalog-item">
             <a href="#">
                 <img class="catalog-item-preview" src="img/previews/pink.jpg" alt="Pink">
             </a>
-        </div>    
-        <div class="catalog-item">
+        </article>    
+        <article class="catalog-item">
             <a href="#">
                 <img class="catalog-item-preview" src="img/previews/mishka.jpg" alt="Mishka">
             </a>
-        </div>
-    <div class="catalog-item">
-        <a href="#">
+        </article>
+        <article class="catalog-item">
+          <a href="#">
             <img class="catalog-item-preview" src="img/previews/kvast.jpg" alt="Kvast">
-        </a>
-    </div>    
-    </div> 
+          </a>
+        </article> 
       </section>    
             <div class="pageswitcher">
                 <span class="current">1</span>
@@ -139,20 +137,20 @@
                 <a href="#">3</a>
                 <a class="btn" href="#">Следующая</a>
             </div>
+      </section>
     </main>
         <!--Футер-->
-              <footer class="main-footer">
-          <section class="footer-contacts">
-              <img class="map" src="img/map.jpg" alt="Санкт Петербург, ул. Б. Конюшенная, д.19/8">
-            <div class="contacts-block">
-                <h4>Nёrds Design Studio</h4>
+    <footer class="main-footer">
+      <section class="footer-contacts" style="background: url(img/map.jpg);">
+        <div class="contacts-block">
+          <h4>Nёrds Design Studio</h4>
                                              191186, Санкт-Петербург, <br>
                                              ул. Б. Конюшенная, д.19/8
                                              <br>
                                              тел. +7 (812) 275-75-75
-                <a class="red-btn" href="#">Напишите нам</a>
-            </div>
-          </section>
+          <a class="red-btn" href="#">Напишите нам</a>
+        </div>
+      </section>
           <div class="container">
               <section class="footer-social">
                   <a class="social" href="#">VK</a>
