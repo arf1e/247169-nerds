@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Nёrd`s | Магазин готовых шаблонов</title>
+  </head>
+    <body>
+        <!--Хедер-->
+        <header class="main-header">
+            <a class="header-logo" href="index.html">
+    <img class="header-logo" src="img/headerlogo.png" alt="Nёrd`s">
+            </a>
+    <div class="container">
+        <nav class="main-navigation">
+            <ul>
+                <li>
+                    <a href="#">Студия</a>
+                </li>
+                <li>
+                    <a href="#">Клиенты</a>
+                </li>
+                <li>
+                    <span class="current">Магазин</span>
+                </li>
+                <li>
+                    <a href="#">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="shopping-block">
+            <a class="cart" href="#">Корзина</a>
+        </div>
+    </div>
+        <div class="current-page">
+            <h1>Магазин готовых шаблонов</h1>
+        </div>
+</header>
+<main class="page-content">
+    <!--Фильтры-->
+  <div class="filter">
+    <form class="catalog-filter" action="echo.htmlacademy.ru" method="post">
+            <h2>Стоимость:</h2>
+        <div class="scroll-filter"> </div> <!-- Здесь будет визуальный ценовой фильтр -->
+        <div class="price-filter">
+            <label>
+                От <input class="min-price" type="text" value="0"> 
+            </label>
+            <label>
+                До <input class="max-price" type="text" value="15 000">
+            </label>
+        </div>
+        <div class="grid-filter">
+            <h2>Сетка:</h2>
+            <label> 
+                <input class="grid-radio" type="radio" name="grid" value="adaptive" checked>Адаптивная</label>
+            <label> 
+                <input class="grid-radio" type="radio" name="grid" value="fixed">Фиксированная</label>
+            <label> 
+                <input class="grid-radio" type="radio" name="grid" value="rubber">Резиновая</label>
+        </div>
+        <div class="features-filter">
+            <h2>Особенности:</h2>
+        <label>
+            <input type="checkbox" name="slider" value="slider" checked> Слайдер </label>
+        <label>
+            <input type="checkbox" name="featuresblock" value="featuresblock"> Блок преимуществ </label>
+        <label>
+            <input type="checkbox" name="news" value="news" checked> Новости </label>
+        <label>
+            <input type="checkbox" name="gallery" value="gallery"> Галерея </label>
+        <label>
+            <input type="checkbox" name="cart" value="cart"> Корзина </label>
+        </div>
+        <input class="confirm-btn" type="submit" value="Показать">
+    </form>
+    </div>  
+       <!-- Товары: --> 
+    <section class="catalog">
+      <div class="sort-container">
+        <h2>Сортировать:</h2>
+          <ul class="sort">
+              <li>
+                  <span class="current"> По цене </span>
+              </li>
+              <li>
+                <a href="#"> По типу </a>
+              </li>
+              <li>
+                <a href="#"> По названию </a>
+              </li>
+              <li>
+                <a class="sort-down current" href="#"> По убыванию </a>
+              </li>
+              <li>
+                <a class="sort-up" href="#"> По возрастанию </a>
+              </li>    
+          </ul>
+        </div>
+      <section class="catalog-items">
+        <article class="catalog-item-hovered">
+              <img class="catalog-item-preview" src="img/previews/sedona.jpg" alt="Sedona">
+              <div class="active-item-info">
+                <span class="catalog-item-name"> Sedona </span>
+                <p class="catalog-item-description"> Информационный сайт для туристов </p>
+                <a class="red-btn" href="#"> 9 900 руб. </a>
+              </div>
+        </article>
+        <article class="catalog-item">
+          <a href="#">
+            <img class="catalog-item-preview" src="img/previews/borodinski.jpg" alt="Borodinski">
+          </a>
+        </article>
+        <article class="catalog-item">
+          <a href="#">
+            <img class="catalog-item-preview" src="img/previews/aplus.jpg" alt="А+">
+          </a>
+        </article>
+        <article class="catalog-item">
+            <a href="#">
+                <img class="catalog-item-preview" src="img/previews/pink.jpg" alt="Pink">
+            </a>
+        </article>    
+        <article class="catalog-item">
+            <a href="#">
+                <img class="catalog-item-preview" src="img/previews/mishka.jpg" alt="Mishka">
+            </a>
+        </article>
+        <article class="catalog-item">
+          <a href="#">
+            <img class="catalog-item-preview" src="img/previews/kvast.jpg" alt="Kvast">
+          </a>
+        </article> 
+      </section>    
+            <div class="pageswitcher">
+                <span class="current">1</span>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a class="btn" href="#">Следующая</a>
+            </div>
+      </section>
+    </main>
+        <!--Футер-->
+    <footer class="main-footer">
+      <section class="footer-contacts" style="background: url(img/map.jpg);">
+        <div class="contacts-block">
+          <h4>Nёrds Design Studio</h4>
+                                             191186, Санкт-Петербург, <br>
+                                             ул. Б. Конюшенная, д.19/8
+                                             <br>
+                                             тел. +7 (812) 275-75-75
+          <a class="red-btn" href="#">Напишите нам</a>
+        </div>
+      </section>
+          <div class="container">
+              <section class="footer-social">
+                  <a class="social" href="#">VK</a>
+                  <a class="social" href="#">FB</a>
+                  <a class="social" href="#">Instagram</a>
+              </section>
+              <section class="promo">
+                  <h2>Давайте дружить, это выгодно!</h2>
+                  <p class="description">Скидка 10% для друзей из социальных сетей.</p>
+              </section>
+          </div>
+      </footer>            
+  </body>
+</html>
+        
+    
