@@ -1,0 +1,23 @@
+body {
+  font-size: 16px;
+  font-family: "Roboto" inherit;
+  line-height: 1.5em;
+  color: #283136; 
+}
+
+h1 {
+    font-size: 55px;
+    color: black;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+h2 {
+    font-size: 45px;
+    color: black;
+    font-weight: bold;
+    line-height: 1em;   
+}
+
+
+
