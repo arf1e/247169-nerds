@@ -46,14 +46,18 @@
         <h2>Стоимость:</h2>
         <div class="scroll-filter"></div> <!-- Здесь будет визуальный ценовой фильтр -->
         <div class="price-filter">
+          <div class="price-type">
             <label>
                 От <input class="min-price" type="text" value="0"> 
             </label>
+          </div>
+          <div class="price-type">    
             <label>
                 До <input class="max-price" type="text" value="15 000">
             </label>
+          </div>      
         </div>
-        <div class="grid-filter">
+        <div class="grid-filter clearfix">
             <h2>Сетка:</h2>
             <label> 
                 <input class="grid-radio" type="radio" name="grid" value="adaptive" checked>Адаптивная</label>
@@ -62,7 +66,7 @@
             <label> 
                 <input class="grid-radio" type="radio" name="grid" value="rubber">Резиновая</label>
         </div>
-        <div class="features-filter">
+        <div class="features-filter clearfix">
             <h2>Особенности:</h2>
         <label>
             <input type="checkbox" name="slider" value="slider" checked> Слайдер </label>
@@ -104,21 +108,21 @@
         <article class="catalog-item hovered">
             <div class="item-border hovered"></div>
             <div class="item-content" style="background: url(img/previews/sedona.jpg);">
-              <div class="item-info">
+             <!-- <div class="item-info">
                 <span class="catalog-item-name"> Sedona </span>
                 <p class="catalog-item-description"> Информационный сайт <br> для туристов </p>
-                <a class="red-btn" href="#"> 9 900 руб. </a>
+                <a class="red-btn" href="#"> 9 900 руб. </a> !-->
               </div>
             </div>    
         </article>
         <article class="catalog-item">
           <div class="item-border"></div>
           <div class="item-content" style="background: url(img/previews/pink.jpg);">
-          <div class="item-info">
+          <!-- <div class="item-info">
               <span class="catalog-item-name"> Pink App </span>
-              <p class="catalog-item-description"> Продуктовый лендинг <br> приложения для iOS и Android </p>
+              <p class="catalog-item-description"> Продуктовый лендинг <br> приложения для iOS и Android </p>   Мне это всё потом всё равно понадобится
               <a class="red-btn" href="#"> 9 900 руб. </a>
-          </div>
+          </div> !-->
          </div>      
         </article>   
         <article class="catalog-item">
@@ -146,7 +150,7 @@
           </a>
         </article> 
       </section>    
-            <div class="pageswitcher">
+           <div class="pageswitcher">
                 <span class="current">1</span>
                 <a href="#">2</a>
                 <a href="#">3</a>

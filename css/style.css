@@ -151,7 +151,8 @@ h2 {
 }
 
 
-.about h2 {
+.about-text h2 {
+    font-size: 45px;
     height: 98px;
     width: 665px;
     margin-bottom: 32px;
@@ -339,11 +340,6 @@ footer {
     margin-bottom: 77px;
 }
 
-.shop-header navigation {
-    height: 65px;
-}
-
-
 .shop-header h1 {
     width: 760px;
     height: 63px;
@@ -368,7 +364,6 @@ form > h2 {
     margin-bottom: 50px;
 }
 
-
 .filter h2,
  main h2 {
     font-size: 18px;
@@ -380,7 +375,78 @@ form > h2 {
 .scroll-filter {
     width: 260px;
     height: 80px;
-    background-color: aqua
+    background-color: aqua;
+    margin-bottom: 14px;
+}
+
+.price-filter {
+    width: 260px;
+    height: 38px;
+    margin-bottom: 60px;
+}
+
+.price-filter label {
+    width: 30px;
+}
+
+.price-filter input {
+    display: block;
+    width: 81px;
+    height: 32px;
+    float: right;
+}
+
+.price-type {
+    vertical-align: middle;
+    width: 115px;
+    height: 38px;
+    float: left;
+}
+
+.price-type:last-child {
+    float: right;
+}
+
+.grid-filter label {
+    width: 180px;
+    height: 25px;
+    float: left;
+}
+
+.grid-filter label:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.grid-filter h2 {
+    margin-bottom: 18px;
+}
+
+.grid-filter {
+    margin-bottom: 48px;
+}
+
+.features-filter h2 {
+    margin-bottom: 15px;
+}
+
+.features-filter label {
+    width: 200px;
+    height: 23px;
+    float: left;
+}
+
+.features-filter label:not(:last-child) {
+    margin-bottom: 17px;
+}
+
+.features-filter {
+    margin-bottom: 40px;
+}
+
+.confirm-btn {
+    width: 260px;
+    height: 50px;
+    
 }
 
 .catalog {
@@ -415,7 +481,33 @@ form > h2 {
 
 .catalog-items {
     width: 760px;
+    min-height: 1922px;
     float: right;
+    margin-bottom: 60px;  
+}
+
+.pageswitcher {
+    width: 445px;
+    height: 50px;
+    float: left;
+    
+}
+
+.pageswitcher :not(:last-child) {
+    width: 50px;
+    height: 50px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+
+.pageswitcher a:last-child {
+    display: block;
+    width: 260px;
+    height: 50px;
+    float: right;
+    text-align: center;
+    background: #eeeeee;
 }
 
 .catalog-item { 
@@ -427,55 +519,7 @@ form > h2 {
 }
 
 .item-content {
-    height: 231px;
-    padding-top: 346px;
-}
-
-.item-info {
-    display: none;
-    width: 360px;
-    height: 199px;
-    background-color: #eeeeee;
-    margin-bottom: 0px;
-    padding-top: 32px;
-}
-
-.catalog-item-name {
-    text-align: center;
-    display: block;
-    width: 160px;
-    height: 20px;
-    margin: 0 auto;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.catalog-item-description {
-    text-align: center;
-    width: 240px;
-    height: 37px;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-}
-
-.item-info a {
-    display: block;
-    width: 200px;
-    height: 20px;
-    text-align: center;
-    margin: 0 auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    background-color: #fb565a;
-    color: white;
-    font-weight: bold;
-}
-
-.catalog-item:hover .item-info {
-    display: block;
+    height: 577px;;
 }
 
 .catalog-item:not(:nth-child(2n)) {
@@ -494,6 +538,9 @@ form > h2 {
     background: url(/img/previews/borderimage-hovered.png);
 }
 
+.page-content {
+    margin-bottom: 60px;
+}
 
 
     
