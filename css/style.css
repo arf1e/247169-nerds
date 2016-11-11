@@ -2,7 +2,10 @@ body {
   font-size: 16px;
   font-family: "Roboto" inherit;
   line-height: 1.5em;
-  color: #283136; 
+  color: #283136;
+  min-width: 1200px;
+  margin: 0 auto;
+    
 }
 
 h1 {
@@ -18,6 +21,573 @@ h2 {
     font-weight: bold;
     line-height: 1em;   
 }
+
+.container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.navigation {
+    width: 1160px;
+    margin: 0 auto;
+    height: 65px;
+    background-color: #eeeeee;
+}
+
+
+.main-navigation {
+    float:left;
+    min-height: 20px;
+    width: 440px;
+}
+
+.main-navigation li {
+    display: inline-block;
+    height: 18px;
+    font-size: 16px;
+}
+
+.main-navigation li:not(:last-child) {
+    padding-right: 45px;
+}
+
+.main-header {
+    min-height: 65px;
+    vertical-align: middle;
+    height: 496px;
+    margin-bottom: 80px;
+    background-color: #eeeeee;
+}
+
+.header-logo {
+    width: 160px;
+    height: 65px;
+    float: left;
+    margin-right: 200px;
+    
+}
+
+.shopping-block {
+    float: right;
+    height: 18px;
+    width: 120px;
+    text-align: right;
+    margin-top: 20px;
+    
+}
+
+.slide {
+    height: 353px;
+    padding-top: 77px;
+}
+
+
+.slideswitcher {
+    height: 18px;
+    width: 88px;
+    margin: 0 auto;
+}
+
+.slide h1 {
+    width: 410px;
+    height: 120px;
+    margin-bottom: 20px;
+    
+}
+
+.slide p {
+    width: 363px;
+    height: 43px;
+    margin-bottom: 42px;
+    
+}
+
+.slide a {
+    width: 132px;
+    height: 20px;
+    padding: 15px 54px 15px 54px; 
+    background-color: #fb565a;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+}
+        
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.products {
+    height: 348px;
+    border-bottom: 2px solid #eeeeee;
+
+}
+
+.product-preview {
+    float: left;
+    width: 300px;
+    height: 350px;
+}
+
+.product-preview:not(:nth-child(3n)) {
+    margin-right: 100px;
+}
+.about {
+    border-bottom: 2px solid #eeeeee;
+}
+    
+.about-text {
+    padding-top: 75px;
+    width: 700px;
+    height: 505px;
+    float: left;
+}
+
+.about-text h4 {
+    width: 312px;
+    height: 20px;
+    margin-bottom: 30px;
+}
+
+
+.about-text h2 {
+    font-size: 45px;
+    height: 98px;
+    width: 665px;
+    margin-bottom: 32px;
+}
+
+.about p {
+    width: 616px;
+    height: 45px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.about ul {
+    float: left;
+    width: 396px;
+    height: 20px;
+}
+.about li:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.about-stats {
+    padding-top: 40px;
+    float: right;
+    width: 360px;
+    height: 410px;
+}
+
+.about-pic {
+    width: 360px;
+    height: 208px;
+    margin-bottom: 40px;
+}
+
+.about-stats h4 {
+    width: 330px;
+    height: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.stats {
+    width: 348px;
+    height: 115px;
+}
+
+.stats-block {
+    width: 98px;
+    height: 115px;
+    float: left;
+}
+
+.percentage {
+    width: 98px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.stats-block .description {
+    text-align: right;;
+}
+
+
+.stats-block:not(:nth-child(3n)) {
+    margin-right: 25px;
+}
+
+.trusted-by {
+    padding-top: 45px;
+    height: 88px;
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 45px;
+}
+
+.trusted-brand:first-child {
+    text-align: center;
+    width: 278px;
+    border-right: 2px solid #eeeeee;
+    float: left;
+}
+
+.trusted-brand:not(:last-child) {
+    text-align: center;
+    width: 298px;
+    border-right: 2px solid #eeeeee;
+    float: left;
+}
+
+.trusted-brand:last-child {
+    text-align: center;
+    width: 215px;
+    float: right;
+}
+
+footer {
+    height: 635px;
+    padding-top: 80px;
+}
+    
+.footer-contacts {
+    padding: 54px 0;
+    height: 308px;
+}
+
+.contacts-block {
+    width: 219px;
+    height: 208px;
+    background-color: white;
+    float: left;
+    padding-top: 54px;
+    padding-bottom: 47px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.contacts-block h4 {
+    width:218px;
+    height: 20px;
+    margin-bottom: 28px;
+    display: block;
+    
+}
+
+.contacts-block span {
+    width: 176px;
+    height: 19px;
+    display: block;
+    margin-bottom: 36px;
+}
+
+
+.contacts-block a {
+    width: 130px;
+    height: 18px;
+    padding-top: 17px;
+    padding-bottom: 15px;
+    padding-left: 45px;
+    padding-right: 45px;
+    text-align: center;
+    margin-top: 36px;
+    background-color: #fb565a;
+    color: white;
+    font-weight: bold;
+}
+
+.footer-social {
+    margin-top: 70px;
+    width: 270px;
+    height: 79px;
+    float: left;
+    margin-right: 130px;
+}
+
+.footer-social a {
+    width: 79px;
+    height: 79px;
+    display: block;
+    float: left;
+}
+
+.footer-social a:not(:last-child) {
+    margin-right: 13px;
+}
+
+.promo {
+    margin-top: 75px;
+    width: 560px;
+    height: 73px;
+    float: left;
+    padding-bottom: 7px;
+}
+
+.promo h2 {
+    font-size: 32px;
+    margin-bottom: 6px;
+    margin-top: 0px;
+}
+
+/* Здесь я начинаю делать каталог. */
+.shop-header {
+    height: 305px;
+    background-color: #eeeeee;
+    padding-top: 50px;
+    margin-bottom: 77px;
+}
+
+.shop-header h1 {
+    width: 760px;
+    height: 63px;
+    font-size: 55px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.current-page {
+    height: 164px;
+    padding-top: 77px;
+}
+
+.filter {
+    width: 260px;
+    height: 779px;
+    float: left;
+    padding-top: 0px;
+}
+
+form > h2 {
+    margin-bottom: 50px;
+}
+
+.filter h2,
+ main h2 {
+    font-size: 18px;
+    width: 137px;
+    height: 26px;
+}
+
+
+.scroll-filter {
+    width: 260px;
+    height: 80px;
+    background-color: aqua;
+    margin-bottom: 14px;
+}
+
+.price-filter {
+    width: 260px;
+    height: 38px;
+    margin-bottom: 60px;
+}
+
+.price-filter label {
+    width: 30px;
+}
+
+.price-filter input {
+    display: block;
+    width: 81px;
+    height: 32px;
+    float: right;
+}
+
+.price-type {
+    vertical-align: middle;
+    width: 115px;
+    height: 38px;
+    float: left;
+}
+
+.price-type:last-child {
+    float: right;
+}
+
+.grid-filter label {
+    width: 180px;
+    height: 25px;
+    float: left;
+}
+
+.grid-filter label:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.grid-filter h2 {
+    margin-bottom: 18px;
+}
+
+.grid-filter {
+    margin-bottom: 48px;
+}
+
+.features-filter h2 {
+    margin-bottom: 15px;
+}
+
+.features-filter label {
+    width: 200px;
+    height: 23px;
+    float: left;
+}
+
+.features-filter label:not(:last-child) {
+    margin-bottom: 17px;
+}
+
+.features-filter {
+    margin-bottom: 40px;
+}
+
+.confirm-btn {
+    width: 260px;
+    height: 50px;
+    
+}
+
+.catalog {
+    width: 760px;
+    float: right;
+}
+
+.sort-container {
+    width: 760px;
+    height: 40px;    
+    margin-bottom: 50px;
+}
+
+.sort-container h2 {
+    float: left;
+    height: 26px;
+    width: 150px;
+}
+
+.sort {
+    height: 26px;
+    width: 460px;
+    float: right;
+    text-align: right;
+}
+
+.sort li {
+    display: inline-block;
+    font-size: 14px;
+    height: 26px
+}
+
+.catalog-items {
+    width: 760px;
+    min-height: 1922px;
+    float: right;
+    margin-bottom: 60px;  
+}
+
+.pageswitcher {
+    width: 445px;
+    height: 50px;
+    float: left;
+    
+}
+
+.pageswitcher :not(:last-child) {
+    width: 50px;
+    height: 50px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+
+.pageswitcher a:last-child {
+    display: block;
+    width: 260px;
+    height: 50px;
+    float: right;
+    text-align: center;
+    background: #eeeeee;
+}
+
+.catalog-item { 
+    display: inline-block;
+    width: 360px;
+    height: 616px;
+    float: left;
+    margin-bottom: 36px;
+}
+
+.item-content {
+    height: 577px;;
+}
+
+.catalog-item:not(:nth-child(2n)) {
+    margin-right: 40px;
+}
+
+.item-border {
+    width: 360px;
+    height: 41px;
+    background: url(/img/previews/borderimage.png);
+}
+
+.catalog-item:hover .item-border {
+    width: 360px;
+    height: 41px;
+    background: url(/img/previews/borderimage-hovered.png);
+}
+
+.page-content {
+    margin-bottom: 60px;
+}
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+
+    
+    
+    
+
+
+    
+    
+
 
 
 
