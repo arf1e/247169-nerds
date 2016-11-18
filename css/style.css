@@ -1,10 +1,11 @@
 body {
   font-size: 16px;
-  font-family: "Roboto" inherit;
+  font-family: "Roboto", sans-serif;
   line-height: 1.5em;
   color: #283136;
   min-width: 1200px;
   margin: 0 auto;
+  font-style: medium;
     
 }
 
@@ -36,22 +37,61 @@ h2 {
 
 
 .main-navigation {
+	margin-top: 20px;
     float:left;
-    min-height: 20px;
-    width: 440px;
+    height: 20px;
+    min-width: 460px;
+	
 }
 
+.main-navigation ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+
 .main-navigation li {
-    display: inline-block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
     height: 18px;
     font-size: 16px;
+	width: 100px;
+}
+
+.main-navigation a {
+	width: 100px;
+	color: black;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-bottom: 9px;
+  
+}
+
+.main-navigation a:hover {
+	color: #fb565a;
 }
 
 .main-navigation li:not(:last-child) {
-    padding-right: 45px;
+    margin-right: 46px;
+}
+
+.shopping-block a {
+    text-decoration: none;
+    color: black;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.shopping-block a:hover {
+	color: #fb565a;
 }
 
 .main-header {
+	padding-top: 49px;
     min-height: 65px;
     vertical-align: middle;
     height: 496px;
@@ -60,34 +100,79 @@ h2 {
 }
 
 .header-logo {
-    width: 160px;
+    width: 161px;
     height: 65px;
     float: left;
-    margin-right: 200px;
-    
+    margin-right: 200px; 
+	background-image: url(/img/spritesheet.png);
+	background-position: -10px -10px;
+}
+
+.header-logo:hover {
+	background-position: -10px -1296px;
+}
+
+.header-logo:active {
+	background-position: :-10px -1211px;
 }
 
 .shopping-block {
+	position: relative;
     float: right;
-    height: 18px;
+    height: 20px;
     width: 120px;
     text-align: right;
     margin-top: 20px;
-    
+}
+
+.shopping-block::before {
+	content: "";
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	left: 5px;
+	top: 3px;
+	background-image: url(/img/cart-icon.png);
+	background-repeat: no-repeat;
 }
 
 .slide {
+	position: relative;
     height: 353px;
     padding-top: 77px;
 }
 
-
-.slideswitcher {
-    height: 18px;
-    width: 88px;
-    margin: 0 auto;
+.slider input {
+	display: none;
 }
 
+
+.slideswitcher {
+	position: absolute;
+	left: 50%;
+	margin-left: -75px;
+	text-align: center;
+    height: 20px;
+    width: 150px;
+	font-size: 0px;
+	top: 310px;
+}
+
+.slideswitcher label {
+	display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 18px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+#slide-btn-1:checked~.slideswitcher label[for=slide-btn-1], 
+#slide-btn-2:checked~.slideswitcher label[for=slide-btn-2], 
+#slide-btn-3:checked~.slideswitcher label[for=slide-btn-3] {
+    background: white url(/img/inputs/radio/active.jpg) no-repeat center;
+}
 .slide h1 {
     width: 410px;
     height: 120px;
@@ -103,13 +188,22 @@ h2 {
 }
 
 .slide a {
+	text-decoration: none;
     width: 132px;
     height: 20px;
     padding: 15px 54px 15px 54px; 
     background-color: #fb565a;
     color: white;
-    font-style: normal;
-    font-weight: bold;
+	border-radius: 2px;
+	text-transform: uppercase;
+}
+
+.slide a:hover {
+	background-color: #e74246;
+}
+
+.slide a:active {
+	color: rgba( 0, 0, 0, 0.3);
 }
         
 .clearfix::after {
@@ -120,9 +214,23 @@ h2 {
 
 .products {
     height: 348px;
+	padding-bottom: 80px;
     border-bottom: 2px solid #eeeeee;
 
 }
+
+.product-preview h3{
+	font-size: 24px;
+	line-height:30px;
+	text-transform: uppercase;
+	letter-spacing: inherit;
+}
+
+.product-preview p {
+	margin-bottom: 35px;
+	font-style: medium;
+}
+
 
 .product-preview {
     float: left;
@@ -133,8 +241,65 @@ h2 {
 .product-preview:not(:nth-child(3n)) {
     margin-right: 100px;
 }
+
+.btn {
+	width: 160px;
+	height: 50px;
+	padding: 18px 40px;
+	border-radius: 2px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.btn:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.red-btn {
+	background-color: #fb565a;
+	text-decoration: none; /* Это нужно на странице каталога */
+}
+
+.red-btn:hover {
+	background-color: #e74246;
+}
+
+.red-btn:active{
+	background-color: #d7373b;
+	box-shadow: inset 0 3px 3px 0 #c13135;
+}
+
 .about {
     border-bottom: 2px solid #eeeeee;
+}
+
+.green-btn {
+	background-color: #00ca74;
+}
+
+.green-btn:hover {
+	background-color: #00bc6c;
+}
+
+.green-btn:active {
+	background-color: #00aa62;
+	box-shadow: inset 0 3px 3px 0 #009958;
+}
+
+.yellow-btn {
+	background-color: #efc84a;
+}
+
+.yellow-btn:hover {
+	background-color: #eab534;
+}
+
+.yellow-btn:active {
+	background-color: #e5a722;
+	box-shadow: inset 0 3px 3px 0 #ce961f;
 }
     
 .about-text {
@@ -145,32 +310,55 @@ h2 {
 }
 
 .about-text h4 {
-    width: 312px;
-    height: 20px;
+    width: 350px;
+    min-height: 20px;
     margin-bottom: 30px;
+	font-size: 16px;
+	line-height: 24px;
+	text-transform: uppercase;
 }
 
+.about-us {
+  width: 690px;
+  height: 100px;
+  margin-bottom: 30px;
+}
 
-.about h2 {
-    height: 98px;
-    width: 665px;
-    margin-bottom: 32px;
+.about-text h2 {
+    display: inline;
+    font-size: 45px;
 }
 
 .about p {
     width: 616px;
-    height: 45px;
     font-size: 16px;
     margin-bottom: 30px;
 }
 
-.about ul {
+.practice {
     float: left;
-    width: 396px;
-    height: 20px;
+    width: 450px;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.practice li {
+	padding-left: 37px;
+	position: relative;
 }
 .about li:not(:last-child) {
     margin-bottom: 30px;
+}
+
+.practice li:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 0;
+    width: 25px;
+    border-bottom: 2px solid #fb565a;
 }
 
 .about-stats {
@@ -187,10 +375,16 @@ h2 {
 }
 
 .about-stats h4 {
-    width: 330px;
-    height: 20px;
+    width: 350px;
+    height: 24px;
     text-align: center;
     margin-bottom: 30px;
+	text-transform: uppercase;
+}
+
+.percentage {
+	font-weight: bold;
+	font-size: 45px;
 }
 
 .stats {
@@ -227,24 +421,47 @@ h2 {
     padding-bottom: 45px;
 }
 
+.trusted-brand {
+	position: relative;
+	min-height: 90px;
+}
+
+.trusted-brand:not(:last-child):after {
+    content: "";
+    position: absolute;
+	top: 15%;
+    right: 17px;
+    width: 0px;
+	height: 50px;
+    border-right: 2px solid #eeeeee;
+}
+
 .trusted-brand:first-child {
     text-align: center;
     width: 278px;
-    border-right: 2px solid #eeeeee;
-    float: left;
 }
 
 .trusted-brand:not(:last-child) {
     text-align: center;
     width: 298px;
-    border-right: 2px solid #eeeeee;
     float: left;
 }
 
 .trusted-brand:last-child {
     text-align: center;
     width: 215px;
-    float: right;
+    float: left;
+	margin-left: 30px;
+}
+.trusted-brand img {
+	opacity: 0.2
+}
+.trusted-brand img:hover {
+	opacity: 1;
+}
+
+.trusted-brand img:active {
+	opacity: 0.1;
 }
 
 footer {
@@ -253,64 +470,108 @@ footer {
 }
     
 .footer-contacts {
-    padding: 54px 0;
-    height: 308px;
+	position: relative;
+    height: 416px;
 }
 
 .contacts-block {
+	position: absolute;
+	top: 54px;
     width: 219px;
     height: 208px;
     background-color: white;
-    float: left;
-    padding-top: 54px;
-    padding-bottom: 47px;
-    padding-left: 50px;
-    padding-right: 50px;
+	padding-top: 33px;
+	padding-bottom: 67px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.contact-us {
+	width: 220px;
+	height: 210px;
+}
+
+.contact-us p {
+	margin-bottom: 15px;
+}
+
+.contact-btn {
+	display: inline-block;
+	width: 220px;
+	height: 10px;
+	border-radius: 2px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	font-size: 16px;
+	line-height: 18px;
+	text-align: center;
+	padding-top: 18px;
+	padding-bottom: 19px;
+	margin-top: 29px;
 }
 
 .contacts-block h4 {
-    width:218px;
-    height: 20px;
-    margin-bottom: 28px;
-    display: block;
+	line-height: 24px;
+    width: 175px;
+	text-transform: uppercase;
+    margin-bottom: 25px;
     
-}
-
-.contacts-block span {
-    width: 176px;
-    height: 19px;
-    display: block;
-    margin-bottom: 36px;
-}
-
-
-.contacts-block a {
-    width: 130px;
-    height: 18px;
-    padding-top: 17px;
-    padding-bottom: 15px;
-    padding-left: 45px;
-    padding-right: 45px;
-    text-align: center;
-    margin-top: 36px;
-    background-color: #fb565a;
-    color: white;
-    font-weight: bold;
 }
 
 .footer-social {
     margin-top: 70px;
-    width: 270px;
+    width: 280px;
     height: 79px;
     float: left;
     margin-right: 130px;
+	text-align: center;
 }
 
-.footer-social a {
-    width: 79px;
+.social {
+	position: relative;
+	font-size: 0px;
+	width: 79px;
     height: 79px;
-    display: block;
-    float: left;
+    display: inline-block;
+	border-radius: 50%;
+	background-color: #e1e1e1;	
+	background-repeat: no-repeat;
+	background-position: center;
+	vertical-align: top;
+}
+
+.social:hover {
+	background-color: #e74246;
+	transition: 0.25s;
+}
+
+.social:active {
+	background-color: #e74246;
+}
+
+.social-vk {
+	background-image: url(/img/vk-icon.png);
+}
+
+.social-fb {
+	background-image: url(/img/fb-icon.png);
+}
+
+.social-instagram {
+	background-image: url(/img/instagram-icon.png);
+}
+
+.social-vk:active {
+	background-image: url(/img/vk-icon-down.png);
+}
+
+.social-fb:active {
+	background-image: url(/img/fb-icon-down.png);
+}
+
+.social-instagram:active {
+	background-image: url(/img/instagram-icon-down.png);
 }
 
 .footer-social a:not(:last-child) {
@@ -339,11 +600,6 @@ footer {
     margin-bottom: 77px;
 }
 
-.shop-header navigation {
-    height: 65px;
-}
-
-
 .shop-header h1 {
     width: 760px;
     height: 63px;
@@ -359,19 +615,19 @@ footer {
 
 .filter {
     width: 260px;
-    height: 779px;
     float: left;
     padding-top: 0px;
 }
 
 form > h2 {
     margin-bottom: 50px;
+	text-transform: uppercase;
 }
-
 
 .filter h2,
  main h2 {
     font-size: 18px;
+	line-height: 30px;
     width: 137px;
     height: 26px;
 }
@@ -380,8 +636,206 @@ form > h2 {
 .scroll-filter {
     width: 260px;
     height: 80px;
-    background-color: aqua
+    background-color: aqua;
+    margin-bottom: 14px;
 }
+
+.price-filter {
+    width: 260px;
+    height: 38px;
+    margin-bottom: 60px;
+}
+
+.price-filter label {
+    width: 30px;
+	color: black;
+}
+
+.price-filter input {
+    display: block;
+    width: 81px;
+    height: 32px;
+    float: right;
+}
+
+.price-type {
+    vertical-align: middle;
+    height: 38px;
+    float: left;
+	position: relative;
+	margin-bottom: 58px;
+}
+
+.min {
+	width: 145px;
+}
+
+.max {
+	width: 115px;
+}
+
+.price-type label {
+	text-transform: uppercase;
+	position: absolute;
+	top: 8px;
+	left: 0px;
+}
+
+.min-price {
+	margin-left: 32px;
+}
+
+.max-price {
+	margin-left: 34px;
+}
+
+.price-type input {
+	float: left;
+	width: 50px;
+	height: 22px;
+	text-align: center;
+	padding: 8px 15px;
+	font-family: Roboto,sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    border: none;
+    border-radius: 3px;
+    background-color: #f1f1f1;
+    outline: none;
+}
+
+.grid-filter {
+    margin-bottom: 48px;
+}
+
+.grid-filter div {
+    height: 22px;
+	position: relative;
+}
+
+.grid-filter input {
+	display: none;
+	box-sizing: border-box;
+}
+
+.grid-filter label,
+.features-filter label{
+	padding-left: 36px;
+	vertical-align: top;
+	color: black;
+	cursor: pointer;
+}
+
+.grid-filter input[type=radio]:checked + label:before {
+ 	content: "";
+	position: absolute;
+	top: -1px;
+	left: 0px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 4px solid #b8b8b8;
+	background: white no-repeat center;
+	background-image: url(/img/inputs/radio/check.png);
+	cursor: pointer;
+}
+/* Здесь мне очень нужна помощь. Я не могу подобрать правильный набор селекторов, чтобы это работало как надо. */
+input[type=radio]:checked:hover + label:before {
+	border: 4px solid #4d4d4d;
+	background-image: url(/img/inputs/radio/check-hover.jpg);
+}
+
+input[type=radio] + label:before {
+	content: "";
+	position: absolute;
+	top: -1px;
+	left: 0px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 4px solid #b8b8b8;
+	cursor: pointer;
+}
+
+.grid-filter div:not(:last-child) {
+    margin-bottom: 18px;
+}
+
+.grid-filter h2,
+.features-filter h2 {
+    margin-bottom: 18px;
+	text-transform: uppercase;
+}
+
+.features-filter {
+    margin-bottom: 40px;
+}
+
+.features-filter h2 {
+	text-transform: uppercase;
+}
+
+.features-filter div {
+	margin: 0;
+	padding: 0;
+	height: 22px;
+	margin-bottom: 18px;
+	position: relative;
+}
+
+.features-filter input {
+	display: none;
+	box-sizing: border-box;
+}
+
+.features-filter input[type=checkbox]:checked + label:before {
+	content: "";
+	position: absolute;
+	top: -2.5px;
+	left: 2.5px;
+	width: 30px;
+	height: 30px;
+	background: url(/img/inputs/checkbox/checkbox-on.png) no-repeat center;
+}
+/* Я не понимаю, как сделать, чтобы при проставлении галочек изображения не дергались. 
+Я попытался нивелировать эту разницу с помощью свойств позиционирования top и left, но не уверен, что это правильно. */
+
+.features-filter input[type=checkbox] + label:before {
+	content: "";
+	position: absolute;
+	top: -2.5px;
+	left: 0px;
+	width: 30px;
+	height: 30px;
+	background: url(/img/inputs/checkbox/checkbox-off.png) no-repeat center;
+	line-height: 20px;
+}
+
+.confirm-btn {
+    width: 260px;
+    height: 50px;
+	background-color: #eeeeee;
+	border-radius: 2px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 18px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.confirm-btn:hover {
+	background-color: #dfdfdf;
+}
+
+.confirm-btn:active {
+	background-color: #d5d5d5;
+	color: rgba(0,0,0,0.3);
+	box-shadow: inset 0 3px 3px 0 #bfbfbf;
+}
+
+
 
 .catalog {
     width: 760px;
@@ -395,31 +849,165 @@ form > h2 {
 }
 
 .sort-container h2 {
+	text-transform: uppercase;
     float: left;
     height: 26px;
     width: 150px;
 }
 
 .sort {
-    height: 26px;
-    width: 460px;
+	padding-top: 2px;
+    height: 24px;
+    width: 380px;
     float: right;
     text-align: right;
 }
 
 .sort li {
+	text-transform: uppercase;
     display: inline-block;
     font-size: 14px;
+	line-height: 18px;
     height: 26px
 }
 
 .catalog-items {
     width: 760px;
+    min-height: 1922px;
     float: right;
+    margin-bottom: 60px;  
+}
+
+.sort-down,
+.sort-up {
+	display: inline-block;
+	font-size: 0px;
+	width: 9px;
+	height: 9px;
+	vertical-align: middle;
+	background: url(/img/spritesheet.png) no-repeat center;
+}
+
+.sort-down {
+	background-position: -10px -1439px;
+	margin-right: 20px;
+	margin-left: 50px;
+}
+
+.sort-up {
+	background-position: -10px -1468px;
+}
+
+.sort-up:hover {
+	background-position: -10px -1497px;
+}
+
+.sort-up:active {
+	background-position: -10px -1526px;
+}
+/*  А нужно ли задавать стили для фильтра, который априори активен?
+.sort-down:hover {
+	background-position: -10px -420px;
+}
+.sort-down:active {
+	background-position: -10px -1439px;
+}
+*/
+
+.sort li:nth-child(1) {
+	margin-right: 25px;
+}
+.sort li:nth-child(2) {
+	margin-right: 25px;
+}
+
+
+.sort a {
+	text-decoration: none;
+	color: #b2b2b2;
+}
+
+.sort a:hover {
+	color: #8b8b8b;	
+}
+
+.sort a:active {
+	color: black;
+}
+
+
+.pageswitcher {
+	vertical-align: top;
+    height: 50px;
+    float: left;
+	font-size: 0px;
+}
+
+.page-btn {
+	font-weight: bold;
+	display: inline-block;
+    width: 50px;
+    height: 13px;
+    margin-left: 11px;
+	text-align: center;
+	padding-top: 18px;
+	padding-bottom: 19px;
+	font-size: 16px;
+	line-height: 18px;
+	text-decoration: none;
+	background: #eeeeee;
+	border-radius: 2px;
+	vertical-align: middle;
+}
+
+.pageswitcher .active {
+	padding: 0;
+	margin-left: 0;
+	margin-right: 0;
+	width: 44px;
+	height: 13px;
+	background-color: white;
+	border: 3px solid #eeeeee;
+    font-size: 16px;
+	line-height: 18px;
+	padding-top: 15px;
+	padding-bottom: 16px;
+}
+
+.page-btn-next {
+	font-weight: bold;
+    display: inline-block;
+    width: 260px;
+    height: 16px;
+    text-align: center;
+	vertical-align: middle;
+    background: #eeeeee;
+	padding-top: 18px;
+	padding-bottom: 16px;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 18px;
+	text-transform: uppercase;
+	border-radius: 2px;
+	margin-left: 11px;
+}
+
+
+.page-btn:not(.active):hover,
+.page-btn-next:hover {
+	background-color: #dfdfdf;
+}
+
+.page-btn:not(.active):active,
+.page-btn-next:active {
+	background-color: #d5d5d5;
+	color: rgba(0,0,0,0.3);
+	box-shadow: inset 0 3px 3px 0 #bfbfbf;
+	
 }
 
 .catalog-item { 
-    display: inline-block;
+	position: relative;
     width: 360px;
     height: 616px;
     float: left;
@@ -427,11 +1015,47 @@ form > h2 {
 }
 
 .item-content {
-    height: 231px;
-    padding-top: 346px;
+	width: 360px;
+    height: 577px;
 }
 
+.catalog-item:not(:nth-child(2n)) {
+    margin-right: 40px;
+}
+
+.item-border {
+    width: 360px;
+    height: 41px;
+    background: url(/img/previews/borderimage.png);
+}
+
+.catalog-item:hover .item-border {
+    width: 360px;
+    height: 41px;
+    background: url(/img/previews/borderimage-hovered.png);
+}
+
+.page-content {
+    margin-bottom: 60px;
+}
+
+.main-navigation .current {
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-bottom: 9px;
+	border-bottom: 2px solid #fb565a;
+}
+
+.main-navigation a:active,
+.shopping-block a:active {
+	color: black;
+	opacity: 0.3;
+}
+
+
 .item-info {
+	position: absolute;
+	top: 385px;
     display: none;
     width: 360px;
     height: 199px;
@@ -476,22 +1100,6 @@ form > h2 {
 
 .catalog-item:hover .item-info {
     display: block;
-}
-
-.catalog-item:not(:nth-child(2n)) {
-    margin-right: 40px;
-}
-
-.item-border {
-    width: 360px;
-    height: 41px;
-    background: url(/img/previews/borderimage.png);
-}
-
-.catalog-item:hover .item-border {
-    width: 360px;
-    height: 41px;
-    background: url(/img/previews/borderimage-hovered.png);
 }
 
 

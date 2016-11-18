@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Nёrd`s | Магазин готовых шаблонов</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
     <body>
         <!--Хедер-->
         <header class="shop-header clearfix">
           <div class="navigation container clearfix">
             <a class="header-logo" href="index.html">
-              <img class="header-logo" src="img/headerlogo.png" alt="Nёrd`s">
             </a>
             <nav class="main-navigation">
               <ul>
@@ -46,34 +47,28 @@
         <h2>Стоимость:</h2>
         <div class="scroll-filter"></div> <!-- Здесь будет визуальный ценовой фильтр -->
         <div class="price-filter">
-            <label>
-                От <input class="min-price" type="text" value="0"> 
-            </label>
-            <label>
-                До <input class="max-price" type="text" value="15 000">
-            </label>
+          <div class="price-type min">
+			  <label for="min-price"> От </label>
+              <input class="min-price" id="min-price" type="text" value="0"> 
+          </div>
+          <div class="price-type max">    
+			  <label for="max-price"> До </label>
+			  <input class="max-price" id="max-price" type="text" value="15 000">
+          </div>      
         </div>
-        <div class="grid-filter">
-            <h2>Сетка:</h2>
-            <label> 
-                <input class="grid-radio" type="radio" name="grid" value="adaptive" checked>Адаптивная</label>
-            <label> 
-                <input class="grid-radio" type="radio" name="grid" value="fixed">Фиксированная</label>
-            <label> 
-                <input class="grid-radio" type="radio" name="grid" value="rubber">Резиновая</label>
+        <div class="grid-filter clearfix">
+            <h2>Сетка:</h2> 
+			<div class="grid-adaptive"><input class="grid-radio" type="radio" name="grid" id="adaptive" value="adaptive" checked><label for="adaptive">Адаптивная</label></div>
+			<div class="grid-fixed"><input class="grid-radio" type="radio" name="grid" id="fixed" value="fixed"><label for="fixed">Фиксированная</label></div>
+            <div class="grid-rubber"><input class="grid-radio" type="radio" name="grid" id="rubber" value="rubber"><label for="rubber">Резиновая</label></div>
         </div>
         <div class="features-filter">
             <h2>Особенности:</h2>
-        <label>
-            <input type="checkbox" name="slider" value="slider" checked> Слайдер </label>
-        <label>
-            <input type="checkbox" name="featuresblock" value="featuresblock"> Блок преимуществ </label>
-        <label>
-            <input type="checkbox" name="news" value="news" checked> Новости </label>
-        <label>
-            <input type="checkbox" name="gallery" value="gallery"> Галерея </label>
-        <label>
-            <input type="checkbox" name="cart" value="cart"> Корзина </label>
+			<div class="features-slider"><input type="checkbox" name="slider" value="slider" id="slider" checked><label for="slider">Слайдер</label></div>
+			<div class="features-featuresblock"><input type="checkbox" name="featuresblock" value="featuresblock" id="featuresblock"><label for="featuresblock">Блок преимуществ</label></div>
+			<div class="features-news"><input type="checkbox" name="news" value="news" id="news" checked><label for="news">Новости</label></div>
+			<div class="features-gallery"><input type="checkbox" name="gallery" value="gallery" id="gallery"><label for="gallery">Галерея</label></div>
+			<div class="features-cart"><input type="checkbox" name="cart" value="cart" id="cart"><label for="cart">Корзина</label></div>
         </div>
         <input class="confirm-btn" type="submit" value="Показать">
     </form>
@@ -93,7 +88,7 @@
                 <a href="#"> По названию </a>
               </li>
               <li>
-                <a class="sort-down current" href="#"> По убыванию </a>
+                <span class="sort-down current" href="#"> По убыванию </a>
               </li>
               <li>
                 <a class="sort-up" href="#"> По возрастанию </a>
@@ -104,7 +99,7 @@
         <article class="catalog-item hovered">
             <div class="item-border hovered"></div>
             <div class="item-content" style="background: url(img/previews/sedona.jpg);">
-              <div class="item-info">
+             <div class="item-info">
                 <span class="catalog-item-name"> Sedona </span>
                 <p class="catalog-item-description"> Информационный сайт <br> для туристов </p>
                 <a class="red-btn" href="#"> 9 900 руб. </a>
@@ -123,34 +118,50 @@
         </article>   
         <article class="catalog-item">
           <div class="item-border"></div> 
-          <a href="#">
-            <img class="catalog-item-preview" src="img/previews/borodinski.jpg" alt="Borodinski">
-          </a>
+		<div class="item-content" style="background: url(img/previews/borodinski.jpg);">
+		  <div class="item-info">
+			  <span class="catalog-item-name"> Barbershop </span>
+			  <p class="catalog-item-description"> Сайт салоны красоты. <br> Для мужчин, да. </p>
+			  <a class="red-btn" href="#"> 9 900 руб. </a>
+			</div>
+		</div>
         </article>
         <article class="catalog-item">
-          <div class="item-border"></div>    
-          <a href="#">
-          <img class="catalog-item-preview" src="img/previews/mishka.jpg" alt="Mishka">
-          </a>
+          <div class="item-border"></div> 
+		  <div class="item-content" style="background: url(img/previews/mishka.jpg);">
+			  <div class="item-info">
+                <span class="catalog-item-name"> Mishka </span>
+                <p class="catalog-item-description"> Интернет-магазин <br> вязаных игрушек </p>
+                <a class="red-btn" href="#"> 9 900 руб. </a>
+            </div>
+          </div>
         </article>  
         <article class="catalog-item">
-          <div class="item-border"></div>     
-          <a href="#">
-            <img class="catalog-item-preview" src="img/previews/aplus.jpg" alt="А+">
-          </a>
+          <div class="item-border"></div>   
+          <div class="item-content" style="background: url(img/previews/aplus.jpg);">
+            <div class="item-info">
+              <span class="catalog-item-name"> A Plus </span>
+              <p class="catalog-item-description"> Лендинг курсов повышения квалификации </p>
+              <a class="red-btn" href="#"> 9 900 руб. </a>
+            </div>
+          </div>
         </article>   
         <article class="catalog-item">
           <div class="item-border"></div>
-          <a href="#">
-            <img class="catalog-item-preview" src="img/previews/kvast.jpg" alt="Kvast">
-          </a>
+          <div class="item-content" style="background: url(img/previews/kvast.jpg);">
+            <div class="item-info">
+              <span class="catalog-item-name"> Кваст </span>
+              <p class="catalog-item-description"> Промо-сайт производителя крафтового кваса </p>
+              <a class="red-btn" href="#"> 9 900 руб. </a>
+            </div>
+          </div>
         </article> 
       </section>    
-            <div class="pageswitcher">
-                <span class="current">1</span>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a class="btn" href="#">Следующая</a>
+           <div class="pageswitcher">
+                <a class="page-btn active">1</a>
+                <a class="page-btn" href="#">2</a>
+                <a class="page-btn" href="#">3</a>
+                <a class="page-btn-next" href="#">Следующая</a>
             </div>
       </section>
     </main>
@@ -158,21 +169,21 @@
     <footer class="main-footer">
           <section class="footer-contacts container" style="background: url(/img/map.jpg) no-repeat center;">
             <div class="contacts-block">
+				<div class="contact-us">
                 <h4>Nёrds Design Studio</h4>
-                                             191186, Санкт-Петербург, <br>
-                                             ул. Б. Конюшенная, д.19/8
-                                             <br><br>
+                                         <p> 191186, Санкт-Петербург, <br>
+											 ул. Б. Конюшенная, д.19/8 </p>
                                              <span>тел. +7 (812) 275-75-75</span>
-                <div class="contact-btn">
-                <a class="red-btn" href="#">Напишите нам</a>
-                </div>
+                <a class="contact-btn red-btn" href="#">Напишите нам</a>
+				</div>
+            </div>
             </div>
           </section>
           <div class="container clearfix">
               <section class="footer-social">
-                  <a class="social" href="#">VK</a>
-                  <a class="social" href="#">FB</a>
-                  <a class="social" href="#">Instagram</a>
+                  <a class="social social-vk" href="#">VK</a>
+                  <a class="social social-fb" href="#">FB</a>
+                  <a class="social social-instagram" href="#">Instagram</a>
               </section>
               <section class="promo">
                   <h2>Давайте дружить, это выгодно!</h2>
