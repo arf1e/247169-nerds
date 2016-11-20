@@ -5,7 +5,7 @@
     <title>Nёrd`s | Магазин готовых шаблонов</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
   </head>
     <body>
         <!--Хедер-->
@@ -45,7 +45,15 @@
   <div class="filter">
     <form class="catalog-filter" action="echo.htmlacademy.ru" method="post">
         <h2>Стоимость:</h2>
-        <div class="scroll-filter"></div> <!-- Здесь будет визуальный ценовой фильтр -->
+        <div class="scroll-filter">
+		  <div class="range-controls">
+		    <div class="scale">
+			  <div class="bar" style="width:65%"> </div>
+			</div>
+			  <div class="toggle min-toggle"> </div>
+			  <div class="toggle max-toggle"> </div>
+			</div>
+		  </div>
         <div class="price-filter">
           <div class="price-type min">
 			  <label for="min-price"> От </label>

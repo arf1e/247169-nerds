@@ -1,6 +1,6 @@
 body {
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   line-height: 1.5em;
   color: #283136;
   min-width: 1200px;
@@ -37,7 +37,7 @@ h2 {
 
 
 .main-navigation {
-	margin-top: 20px;
+	margin-top: 28px;
     float:left;
     height: 20px;
     min-width: 460px;
@@ -58,7 +58,7 @@ h2 {
 	display: inline-block;
     height: 18px;
     font-size: 16px;
-	width: 100px;
+	line-height: 18px;
 }
 
 .main-navigation a {
@@ -76,7 +76,7 @@ h2 {
 }
 
 .main-navigation li:not(:last-child) {
-    margin-right: 46px;
+    margin-right: 43px;
 }
 
 .shopping-block a {
@@ -91,7 +91,7 @@ h2 {
 }
 
 .main-header {
-	padding-top: 49px;
+	padding-top: 50px;
     min-height: 65px;
     vertical-align: middle;
     height: 496px;
@@ -122,7 +122,7 @@ h2 {
     height: 20px;
     width: 120px;
     text-align: right;
-    margin-top: 20px;
+    margin-top: 28px;
 }
 
 .shopping-block::before {
@@ -136,54 +136,74 @@ h2 {
 	background-repeat: no-repeat;
 }
 
-.slide {
+.slider {
 	position: relative;
-    height: 353px;
-    padding-top: 77px;
+}
+
+.slide {
+	height: 390px;
+    padding-top: 41.5px;
 }
 
 .slider input {
 	display: none;
 }
 
-
 .slideswitcher {
 	position: absolute;
 	left: 50%;
-	margin-left: -75px;
+	margin-left: -47px;
 	text-align: center;
     height: 20px;
-    width: 150px;
 	font-size: 0px;
-	top: 310px;
+	top: 315px;
 }
 
 .slideswitcher label {
 	display: inline-block;
-    width: 18px;
-    height: 18px;
-    margin-right: 18px;
+    width: 15px;
+    height: 15px;
+    margin-right: 15px;
     border: 3px solid #fff;
     border-radius: 50%;
     background-color: #fff;
+	cursor: pointer;
 }
 
-#slide-btn-1:checked~.slideswitcher label[for=slide-btn-1], 
-#slide-btn-2:checked~.slideswitcher label[for=slide-btn-2], 
-#slide-btn-3:checked~.slideswitcher label[for=slide-btn-3] {
+#slide-btn-1:checked ~ .slideswitcher label[for=slide-btn-1], 
+#slide-btn-2:checked ~ .slideswitcher label[for=slide-btn-2], 
+#slide-btn-3:checked ~ .slideswitcher label[for=slide-btn-3] {
     background: white url(/img/inputs/radio/active.jpg) no-repeat center;
 }
+
+.slidescreen {
+	display: none;
+}
+
+#slide-btn-1:checked ~ .slide-1{
+	display: block;
+}
+
+#slide-btn-2:checked ~ .slide-2{
+	display: block;
+}
+
+#slide-btn-3:checked ~ .slide-3{
+	display: block;
+}
+
+
 .slide h1 {
-    width: 410px;
+    width: 540px;
+	white-space: pre-wrap;
     height: 120px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     
 }
 
 .slide p {
-    width: 363px;
-    height: 43px;
-    margin-bottom: 42px;
+    width: 420px;
+    margin-bottom: 55px;
     
 }
 
@@ -224,10 +244,12 @@ h2 {
 	line-height:30px;
 	text-transform: uppercase;
 	letter-spacing: inherit;
+	margin-top: 16px;
+	margin-bottom: 5px;
 }
 
 .product-preview p {
-	margin-bottom: 35px;
+	margin-bottom: 46px;
 	font-style: medium;
 }
 
@@ -252,6 +274,7 @@ h2 {
 	color: white;
 	font-size: 16px;
 	line-height: 18px;
+	cursor: pointer;
 }
 
 .btn:active {
@@ -301,18 +324,21 @@ h2 {
 	background-color: #e5a722;
 	box-shadow: inset 0 3px 3px 0 #ce961f;
 }
+
+.about {
+	padding-bottom: 75px;
+}
     
 .about-text {
-    padding-top: 75px;
+    padding-top: 72px;
     width: 700px;
-    height: 505px;
     float: left;
 }
 
 .about-text h4 {
     width: 350px;
     min-height: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
 	font-size: 16px;
 	line-height: 24px;
 	text-transform: uppercase;
@@ -324,15 +350,28 @@ h2 {
   margin-bottom: 30px;
 }
 
+
 .about-text h2 {
+	margin: 0;
+	padding: 0;
     display: inline;
     font-size: 45px;
+	line-height: 45px;
+	letter-spacing: 0px;
+}
+
+h2 span {
+    letter-spacing: 0.45px;
+	word-spacing: 2.2px;
 }
 
 .about p {
+	margin: 0;
+	padding: 0;
     width: 616px;
     font-size: 16px;
-    margin-bottom: 30px;
+    margin-bottom: 39px;
+	margin-top: -8px;
 }
 
 .practice {
@@ -348,7 +387,7 @@ h2 {
 	position: relative;
 }
 .about li:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 23px;
 }
 
 .practice li:before {
@@ -362,7 +401,7 @@ h2 {
 }
 
 .about-stats {
-    padding-top: 40px;
+    padding-top: 38px;
     float: right;
     width: 360px;
     height: 410px;
@@ -371,15 +410,17 @@ h2 {
 .about-pic {
     width: 360px;
     height: 208px;
-    margin-bottom: 40px;
+    margin-bottom: 7px;
 }
 
 .about-stats h4 {
     width: 350px;
-    height: 24px;
+    line-height: 24px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 	text-transform: uppercase;
+	letter-spacing: -0.25px;
+	word-spacing: -1.62px;
 }
 
 .percentage {
@@ -387,9 +428,13 @@ h2 {
 	font-size: 45px;
 }
 
+.percentage sup {
+	font-size: 27px;
+}
+
 .stats {
+	margin-top: 10px;
     width: 348px;
-    height: 115px;
 }
 
 .stats-block {
@@ -402,40 +447,40 @@ h2 {
     width: 98px;
     text-align: center;
     display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom: 28px;
 }
 
+.stats-block:nth-child(3n) .percentage {
+	text-align: left;
+}
+
+
 .stats-block .description {
-    text-align: right;;
+    text-align: right;
+	font-size: 16px;
 }
 
 
 .stats-block:not(:nth-child(3n)) {
-    margin-right: 25px;
+    margin-right: 20px;
 }
 
+
 .trusted-by {
-    padding-top: 45px;
-    height: 88px;
+	padding-top: 40px;
     border-bottom: 2px solid #eeeeee;
-    padding-bottom: 45px;
+	padding-bottom: 37px;
+	margin-bottom: 20px;
+	font-size: 0px;
 }
 
 .trusted-brand {
 	position: relative;
-	min-height: 90px;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 16px;
 }
-
-.trusted-brand:not(:last-child):after {
-    content: "";
-    position: absolute;
-	top: 15%;
-    right: 17px;
-    width: 0px;
-	height: 50px;
-    border-right: 2px solid #eeeeee;
-}
-
+/*
 .trusted-brand:first-child {
     text-align: center;
     width: 278px;
@@ -453,6 +498,8 @@ h2 {
     float: left;
 	margin-left: 30px;
 }
+*/
+
 .trusted-brand img {
 	opacity: 0.2
 }
@@ -462,6 +509,57 @@ h2 {
 
 .trusted-brand img:active {
 	opacity: 0.1;
+}
+
+.htmlacademy {
+	margin-top: 20px;
+	margin-left: 30px;
+	width: 199px;
+	height: 68px;
+}
+
+.htmlacademy::after {
+	content: "";
+	position: absolute;
+	height: 52px;
+	border-right: 2px solid #eeeeee;
+	right: -52px;
+	top: 2px;
+}
+
+.borodinski {
+	margin-top: 3px;
+	width: 209px;
+	height: 87px;
+	margin-left: 48px;
+}
+
+.borodinski::after {
+	content: "";
+	position: absolute;
+	height: 52px;
+	border-right: 2px solid #eeeeee;
+	right: -96px;
+	top: 20px;
+}
+
+.pink {
+	margin-left: 76px;
+	margin-top: 12px;
+}
+
+.pink::after {
+	content: "";
+	position: absolute;
+	height: 52px;
+	border-right: 2px solid #eeeeee;
+	right: -58px;
+	top: 11px;
+}
+
+.mishka {
+	margin-left: 121px;
+	margin-top: 11px;
 }
 
 footer {
@@ -524,8 +622,7 @@ footer {
     width: 280px;
     height: 79px;
     float: left;
-    margin-right: 130px;
-	text-align: center;
+    margin-right: 120px;
 }
 
 .social {
@@ -575,21 +672,22 @@ footer {
 }
 
 .footer-social a:not(:last-child) {
-    margin-right: 13px;
+    margin-right: 8px;
 }
 
 .promo {
     margin-top: 75px;
-    width: 560px;
-    height: 73px;
+    min-width: 560px;
     float: left;
     padding-bottom: 7px;
 }
 
 .promo h2 {
-    font-size: 32px;
-    margin-bottom: 6px;
+    font-size: 36px;
+	line-height: 36px;
+    margin-bottom: -8px;
     margin-top: 0px;
+	letter-spacing: 0.15px;
 }
 
 /* Здесь я начинаю делать каталог. */
@@ -597,7 +695,7 @@ footer {
     height: 305px;
     background-color: #eeeeee;
     padding-top: 50px;
-    margin-bottom: 77px;
+    margin-bottom: 40px;
 }
 
 .shop-header h1 {
@@ -620,24 +718,60 @@ footer {
 }
 
 form > h2 {
-    margin-bottom: 50px;
+	margin-top: 20px;
+    margin-bottom: 55px;
 	text-transform: uppercase;
+	letter-spacing: 0.5px;
 }
 
-.filter h2,
  main h2 {
     font-size: 18px;
-	line-height: 30px;
-    width: 137px;
-    height: 26px;
+	line-height: 18px;
 }
 
 
 .scroll-filter {
     width: 260px;
     height: 80px;
-    background-color: aqua;
-    margin-bottom: 14px;
+    margin-bottom: 15px;
+}
+
+.range-controls {
+	position: relative;
+	height: 80px;
+    margin-bottom: 15px;
+	padding: 0 20px;
+	background: #f1f1f1;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.range-controls .scale {
+	margin-top: 39px;
+	height: 2px;
+	background: #d7dcde;
+}
+
+.range-controls .bar {
+	height: 2px;
+	background: #00ca74;
+}
+
+.range-controls .toggle {
+	position: absolute;
+	top: 30px;
+	left: 17px;
+	width: 4px;
+	height: 4px;
+	border: 8px solid white;
+	background: #ababab;
+	border-radius: 50%;
+	cursor: pointer;
+	box-shadow:0 2px 1px 0 #cfcfcf;
+}
+
+.range-controls .max-toggle {
+	left: 160px;
 }
 
 .price-filter {
@@ -704,8 +838,12 @@ form > h2 {
     outline: none;
 }
 
+/* Стилизация фильтров */
+
+     /* Фильтры сетки: */
+
 .grid-filter {
-    margin-bottom: 48px;
+    margin-bottom: 50px;
 }
 
 .grid-filter div {
@@ -722,39 +860,71 @@ form > h2 {
 .features-filter label{
 	padding-left: 36px;
 	vertical-align: top;
-	color: black;
+	color: #61686c;
 	cursor: pointer;
 }
 
-.grid-filter input[type=radio]:checked + label:before {
+.filter input[type=radio]:checked + label:before {
  	content: "";
 	position: absolute;
-	top: -1px;
+	top: 0px;
 	left: 0px;
-	width: 20px;
-	height: 20px;
+	width: 16px;
+	height: 16px;
 	border-radius: 50%;
 	border: 4px solid #b8b8b8;
 	background: white no-repeat center;
-	background-image: url(/img/inputs/radio/check.png);
 	cursor: pointer;
 }
-/* Здесь мне очень нужна помощь. Я не могу подобрать правильный набор селекторов, чтобы это работало как надо. */
-input[type=radio]:checked:hover + label:before {
-	border: 4px solid #4d4d4d;
-	background-image: url(/img/inputs/radio/check-hover.jpg);
-}
 
-input[type=radio] + label:before {
+.filter input[type=radio]:checked + label::after {
 	content: "";
 	position: absolute;
-	top: -1px;
+	top: 0px;
 	left: 0px;
-	width: 20px;
-	height: 20px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #b8b8b8;
+	top: 8px;
+	left: 8px;
+}
+
+.filter input[type=radio] + label:before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 16px;
+	height: 16px;
 	border-radius: 50%;
 	border: 4px solid #b8b8b8;
 	cursor: pointer;
+}
+
+.filter input[type=radio] + label:hover:before {
+	border: 4px solid #61686c;
+}
+
+
+.filter input[type=radio] + label:hover,
+.filter input[type=checkbox] + label:hover{
+	color: black;
+}
+
+.filter input[type=radio]:checked + label:hover:before {
+	border: 4px solid #61686c;
+}
+
+.filter input[type=radio]:checked + label:hover::after {
+	content: "";
+	position:absolute;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #61686c;
+	top: 8px;
+	left: 8px;
 }
 
 .grid-filter div:not(:last-child) {
@@ -763,12 +933,18 @@ input[type=radio] + label:before {
 
 .grid-filter h2,
 .features-filter h2 {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 	text-transform: uppercase;
 }
 
+.features-filter h2 {
+	margin-bottom: 20px;
+}
+
+/* Фильтр особенностей сайта */
+
 .features-filter {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .features-filter h2 {
@@ -791,24 +967,30 @@ input[type=radio] + label:before {
 .features-filter input[type=checkbox]:checked + label:before {
 	content: "";
 	position: absolute;
-	top: -2.5px;
-	left: 2.5px;
+	top: -4.5px;
+	left: -1.5px;
 	width: 30px;
 	height: 30px;
 	background: url(/img/inputs/checkbox/checkbox-on.png) no-repeat center;
 }
-/* Я не понимаю, как сделать, чтобы при проставлении галочек изображения не дергались. 
-Я попытался нивелировать эту разницу с помощью свойств позиционирования top и left, но не уверен, что это правильно. */
 
 .features-filter input[type=checkbox] + label:before {
 	content: "";
 	position: absolute;
-	top: -2.5px;
-	left: 0px;
+	top: -4.5px;
+	left: -4px;
 	width: 30px;
 	height: 30px;
 	background: url(/img/inputs/checkbox/checkbox-off.png) no-repeat center;
 	line-height: 20px;
+}
+
+.features-filter input[type=checkbox] + label:hover::before {
+	background-image: url(/img/inputs/checkbox/checkbox-off-hovered.png);
+}
+
+.features-filter input[type=checkbox]:checked + label:hover::before {
+	background-image: url(/img/inputs/checkbox/checkbox-on-hovered.png);
 }
 
 .confirm-btn {
@@ -835,17 +1017,16 @@ input[type=radio] + label:before {
 	box-shadow: inset 0 3px 3px 0 #bfbfbf;
 }
 
-
-
 .catalog {
     width: 760px;
     float: right;
 }
 
 .sort-container {
+	padding: 0;
     width: 760px;
     height: 40px;    
-    margin-bottom: 50px;
+    margin-bottom: 52px;
 }
 
 .sort-container h2 {
@@ -853,12 +1034,11 @@ input[type=radio] + label:before {
     float: left;
     height: 26px;
     width: 150px;
+	margin-top: 18px; 
 }
 
 .sort {
-	padding-top: 2px;
     height: 24px;
-    width: 380px;
     float: right;
     text-align: right;
 }
@@ -875,7 +1055,7 @@ input[type=radio] + label:before {
     width: 760px;
     min-height: 1922px;
     float: right;
-    margin-bottom: 60px;  
+    margin-bottom: 27px;  
 }
 
 .sort-down,
@@ -890,8 +1070,8 @@ input[type=radio] + label:before {
 
 .sort-down {
 	background-position: -10px -1439px;
-	margin-right: 20px;
-	margin-left: 50px;
+	margin-right: 18px;
+	margin-left: 42px;
 }
 
 .sort-up {
@@ -915,7 +1095,7 @@ input[type=radio] + label:before {
 */
 
 .sort li:nth-child(1) {
-	margin-right: 25px;
+	margin-right: 20px;
 }
 .sort li:nth-child(2) {
 	margin-right: 25px;
@@ -941,6 +1121,10 @@ input[type=radio] + label:before {
     height: 50px;
     float: left;
 	font-size: 0px;
+}
+
+.page-content {
+	margin-bottom: -18px;
 }
 
 .page-btn {
@@ -1035,10 +1219,6 @@ input[type=radio] + label:before {
     background: url(/img/previews/borderimage-hovered.png);
 }
 
-.page-content {
-    margin-bottom: 60px;
-}
-
 .main-navigation .current {
 	text-transform: uppercase;
 	font-weight: bold;
@@ -1078,7 +1258,6 @@ input[type=radio] + label:before {
 .catalog-item-description {
     text-align: center;
     width: 240px;
-    height: 37px;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -1101,6 +1280,155 @@ input[type=radio] + label:before {
 .catalog-item:hover .item-info {
     display: block;
 }
+
+/* Попап */
+
+.modal-content-show {
+	display: none;
+}
+
+.modal-content {
+	position: fixed;
+	top: 80px;
+	width: 960px;
+	padding-top: 73px;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-bottom: 84px;
+	left: 50%;
+	margin-left: -480px;
+	background: white;
+	box-sizing: border-box;
+	text-align: left;
+	font-size: 16px;
+	line-height: 18px;
+	box-shadow: 0 20px 40px 10px rgba(0,0,0,0.4);
+	z-index: 1000;
+}
+
+.modal-content h2 {
+	margin: 0;
+	font-size: 45px;
+	line-height: 45px;
+	margin-bottom: 36px;
+}
+
+.modal-content-close {
+	position: absolute;
+	width: 21px;
+	height: 21px;
+	background-color: white;
+	top: 78px;
+	right: 90px;
+	cursor: pointer;
+}
+
+.modal-content-close::before {
+	content: "";
+	position: absolute;
+	width: 25px;
+	height: 5px;
+	background-color: rgba(251, 86, 90, 0.3);
+	transform: rotate(45deg);
+	top: 8px;
+	left: -2px;
+	
+}
+
+.modal-content-close::after {
+	content: "";
+	position: absolute;
+	width: 25px;
+	height: 5px;
+	background-color: rgba(251, 86, 90, 0.3);
+	transform: rotate(-45deg);
+	top: 8px;
+	left: -2px;
+}
+
+.modal-content-close:hover::before,
+.modal-content-close:hover::after {
+	background-color: rgba(251, 86, 90, 1);
+}
+
+.modal-content-close:active::before,
+.modal-content-close:active::after {
+	background-color: rgba(251, 86, 90, 0.1);
+}
+
+.modal-content form {
+	margin: 0;
+	padding: 0;
+	display: block;
+} 
+
+.modal-content label,
+.modal-content span {
+	padding: 0;
+	margin: 0;
+	width: 360px;
+	float: left;
+	font-weight: 500;
+	margin-bottom: 8px;
+}
+
+label[for=name] {
+	color: #7f7f7f;
+	
+}
+
+.modal-content label:first-child {
+	margin-right: 40px;
+}
+
+.modal-content input[type=text],
+.modal-content textarea {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 360px;
+	float: left;
+	padding-top: 16px;
+	padding-bottom: 15px;
+	padding-left: 13px;
+	box-sizing: border-box;
+	width: 360px;
+	font-size: 16px;
+	border: 2px solid #d7dcde;
+	border-radius: 2px;
+	margin-bottom: 35px;
+}
+
+.modal-content input[type=text]:first-child {
+	margin-right: 40px;
+}
+
+.modal-content span {
+	margin-bottom: 8px;
+}
+
+.modal-content textarea {
+	margin: 0;
+	float: left;
+	width: 760px;
+	margin-bottom: 47px;
+}
+
+.contact-form-btn {
+	border: 0;
+	font-family: "Roboto", "Arial", sans-serif;
+	text-transform: uppercase;
+	width: 260px;
+	height: 50px;
+	display: block;
+	background-color: #fb565a;
+}
+
+
+
+
+
+
 
 
 
