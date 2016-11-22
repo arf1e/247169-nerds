@@ -58,7 +58,7 @@
 				  });
 
 
-				 window.onload = function () { 
+				 window.onload = function initialize () { 
               var mapOptions = { 
               zoom: 17,
 		      center: new google.maps.LatLng(59.939062, 30.321300)
@@ -72,3 +72,4 @@
 				  icon: image 
 			  }); 
 		  }
+				 google.maps.event.addDomListener(window, 'load', initialize);
