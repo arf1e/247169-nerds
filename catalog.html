@@ -11,7 +11,7 @@
         <!--Хедер-->
         <header class="shop-header clearfix">
           <div class="navigation container clearfix">
-            <a class="header-logo" href="index.html">
+            <a href="index.html"><img class="header-logo" src="img/headerlogo.png" alt="Nerds">
             </a>
             <nav class="main-navigation">
               <ul>
@@ -108,9 +108,9 @@
             <div class="item-border hovered"></div>
             <div class="item-content" style="background: url(img/previews/sedona.jpg);">
              <div class="item-info">
-                <span class="catalog-item-name"> Sedona </span>
+                <a href="#" class="catalog-item-name"> Sedona </a>
                 <p class="catalog-item-description"> Информационный сайт <br> для туристов </p>
-                <a class="red-btn" href="#"> 9 900 руб. </a>
+                <a class="price red-btn" href="#"> 9 900 руб. </a>
               </div>
             </div>    
         </article>
@@ -118,9 +118,9 @@
           <div class="item-border"></div>
           <div class="item-content" style="background: url(img/previews/pink.jpg);">
           <div class="item-info">
-              <span class="catalog-item-name"> Pink App </span>
+              <a href="#" class="catalog-item-name"> Pink App </a>
               <p class="catalog-item-description"> Продуктовый лендинг <br> приложения для iOS и Android </p>
-              <a class="red-btn" href="#"> 9 900 руб. </a>
+              <a class="price red-btn" href="#"> 9 900 руб. </a>
           </div>
          </div>      
         </article>   
@@ -128,9 +128,9 @@
           <div class="item-border"></div> 
 		<div class="item-content" style="background: url(img/previews/borodinski.jpg);">
 		  <div class="item-info">
-			  <span class="catalog-item-name"> Barbershop </span>
+			  <a href="#" class="catalog-item-name"> Barbershop </a>
 			  <p class="catalog-item-description"> Сайт салоны красоты. <br> Для мужчин, да. </p>
-			  <a class="red-btn" href="#"> 9 900 руб. </a>
+			  <a class="price red-btn" href="#"> 9 900 руб. </a>
 			</div>
 		</div>
         </article>
@@ -138,9 +138,9 @@
           <div class="item-border"></div> 
 		  <div class="item-content" style="background: url(img/previews/mishka.jpg);">
 			  <div class="item-info">
-                <span class="catalog-item-name"> Mishka </span>
+				<a href="#" class="catalog-item-name"> Mishka </a>
                 <p class="catalog-item-description"> Интернет-магазин <br> вязаных игрушек </p>
-                <a class="red-btn" href="#"> 9 900 руб. </a>
+                <a class="price red-btn" href="#"> 9 900 руб. </a>
             </div>
           </div>
         </article>  
@@ -148,9 +148,9 @@
           <div class="item-border"></div>   
           <div class="item-content" style="background: url(img/previews/aplus.jpg);">
             <div class="item-info">
-              <span class="catalog-item-name"> A Plus </span>
+              <a href="#" class="catalog-item-name"> A Plus </a>
               <p class="catalog-item-description"> Лендинг курсов повышения квалификации </p>
-              <a class="red-btn" href="#"> 9 900 руб. </a>
+              <a class="price red-btn" href="#"> 9 900 руб. </a>
             </div>
           </div>
         </article>   
@@ -158,9 +158,9 @@
           <div class="item-border"></div>
           <div class="item-content" style="background: url(img/previews/kvast.jpg);">
             <div class="item-info">
-              <span class="catalog-item-name"> Кваст </span>
+              <a href="#" class="catalog-item-name"> Кваст </a>
               <p class="catalog-item-description"> Промо-сайт производителя крафтового кваса </p>
-              <a class="red-btn" href="#"> 9 900 руб. </a>
+              <a class="price red-btn" href="#"> 9 900 руб. </a>
             </div>
           </div>
         </article> 
@@ -175,7 +175,7 @@
     </main>
         <!--Футер-->
     <footer class="main-footer">
-          <section class="footer-contacts container" style="background: url(/img/map.jpg) no-repeat center;">
+          <section class="footer-contacts container" style="background: url(img/map.jpg) no-repeat center;">
             <div class="contacts-block">
 				<div class="contact-us">
                 <h4>Nёrds Design Studio</h4>
@@ -198,7 +198,65 @@
                   <p class="description">Скидка 10% для друзей из социальных сетей.</p>
               </section>
           </div>
-      </footer>                        
+	     <div class="modal-content">
+			<div class="modal-content-close"></div>
+			<h2>Напишите нам</h2>
+			<form action="#" method="post">
+				<div class="clearfix">
+					<label for="name">Ваше имя:</label>
+					<label for="email">Ваш e-mail:</label>
+				</div>
+				<div class="required clearfix">
+					<input type="text" name="username" id="name" placeholder="Представьтесь, пожалуйста">
+					<input type="text" name="e-mail" id="email" placeholder="Для отправки ответа">
+				</div>
+				<span>Текст письма:</span>
+				<textarea class="letter" id="label" rows="6"  placeholder="В свободной форме"></textarea>
+				<input class="contact-form-btn btn red-btn" type="submit" name="send" id="send">
+			</form>
+          </div>
+      </footer>   
+		  <script>
+			  var link = document.querySelector(".contact-btn");
+			  
+			  var popup = document.querySelector(".modal-content");
+			  var close = document.querySelector(".modal-content-close");
+			  
+			  var form = popup.querySelector("form");
+			  var username = popup.querySelector("[name=username]");
+			  var email = popup.querySelector("[name=e-mail]");
+			  var letter = popup.querySelector(".letter");
+			  var requiredinput = popup.querySelector(".required input");
+			  
+			  var storage = localStorage.getItem("username");
+			  
+			  
+			  link.addEventListener("click",function(event) {
+				  event.preventDefault ();
+			      popup.classList.add("modal-content-show");
+				  
+				  if (storage) {
+					  username.value = storage;
+					  email.focus();
+				  } else {
+					  username.focus();
+				  }
+					  
+			  });
+				  close.addEventListener("click", function(event) {
+				  popup.classList.remove("modal-content-show");
+			  });
+			  
+			  form.addEventListener("submit", function(event) {
+				  if (!username.value || !email.value) {
+				  event.preventDefault();
+				  console.log("check");
+				  requiredinput.classList.toggle("input-error");
+				  } else {
+					  localStorage.setItem("username", username.value);
+				  }
+			  });
+		  </script>
   </body>
 </html>
         

@@ -11,7 +11,7 @@
       <!--Хедер-->
 <header class="main-header">
     <div class=" navigation container clearfix">
-		<div class="header-logo"></div>
+		<img class="header-logo" src="img/headerlogo.png" alt="Nёrds">
         <nav class="main-navigation">
             <ul>
                 <li>
@@ -168,7 +168,7 @@
       </main>
       <!--Футер-->
       <footer class="main-footer">
-          <section class="footer-contacts container" style="background: url(/img/map.jpg) no-repeat center;">
+          <section class="footer-contacts container" style="background: #eeeeee url(img/map.jpg) no-repeat center;">
             <div class="contacts-block">
 				<div class="contact-us">
                 <h4>Nёrds Design Studio</h4>
@@ -189,23 +189,85 @@
                   <h2>Давайте дружить, это выгодно!</h2>
                   <p class="description">Скидка 10% для друзей из социальных сетей.</p>
               </section>
-			<div class="modal-content modal-content-show">
+		  </div>
+			<div class="modal-content">
 			<div class="modal-content-close"></div>
 			<h2>Напишите нам</h2>
 			<form action="#" method="post">
 				<div class="clearfix">
 					<label for="name">Ваше имя:</label>
-					<label for="e-mail">Ваш e-mail:</label>
+					<label for="email">Ваш e-mail:</label>
 				</div>
-				<div class="clearfix">
-					<input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста">
-					<input type="text" name="e-mail" id="e-mail" placeholder="Для отправки ответа">
+				<div class="required clearfix">
+					<input type="text" name="username" id="name" placeholder="Представьтесь, пожалуйста">
+					<input type="text" name="e-mail" id="email" placeholder="Для отправки ответа">
 				</div>
 				<span>Текст письма:</span>
 				<textarea class="letter" id="label" rows="6"  placeholder="В свободной форме"></textarea>
 				<input class="contact-form-btn btn red-btn" type="submit" name="send" id="send">
 			</form>
           </div>
-      </footer>            
+      </footer>   
+		  <script>
+			  var link = document.querySelector(".contact-btn");
+			  
+			  var popup = document.querySelector(".modal-content");
+			  var close = document.querySelector(".modal-content-close");
+			  
+			  var form = popup.querySelector("form");
+			  var username = popup.querySelector("[name=username]");
+			  var email = popup.querySelector("[name=e-mail]");
+			  var letter = popup.querySelector(".letter");
+			  var error = document.querySelector(".input-error");
+			  var defaultset = popup.querySelector (".required  [name=username]");
+			  
+			  var storage = localStorage.getItem("username");
+			  
+			  
+			  link.addEventListener("click",function(event) {
+				  event.preventDefault ();
+			      popup.classList.add("modal-content-show");
+				  
+				  if (storage) {
+					  username.value = storage;
+					  email.focus();
+				  } else {
+					  username.focus();
+				  }
+					  
+			  });
+				  close.addEventListener("click", function(event) {
+				  popup.classList.remove("modal-content-show");
+			  });
+			  
+			  form.addEventListener("submit", function(event) {
+				  if (!username.value) {
+					  event.preventDefault(); 
+					  username.classList.add("input-error") }
+				  else { if (username.classList.contains("input-error")) {
+					         username.classList.remove("input-error");
+					  } else {
+						  localStorage.setItem("username", username.value);
+					  }
+				}
+				  if (!email.value) {
+					  event.preventDefault();
+					  email.classList.add("input-error"); } 
+				else { if (email.classList.contains("input-error")) {
+					       email.classList.remove("input-error");
+				} else 
+					localStorage.setItem("e-mail", email.value);
+			  }
+			  });
+			  
+			   window.addEventListener("keydown", function(event) {
+				  if (event.keyCode === 27) {
+					  if (popup.classList.contains("modal-content-show")) {
+						  popup.classList.remove("modal-content-show");
+					  }
+				    }
+				  });
+			  
+		  </script>
   </body>
 </html>
