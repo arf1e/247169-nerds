@@ -174,7 +174,9 @@
     </main>
         <!--Футер-->
     <footer class="main-footer">
-          <section class="footer-contacts container" style="background: url(img/map.jpg) no-repeat center;">
+          <div class="map-wrapper">
+			<div class="map" id="map-canvas" style="background: #eeeeee;">
+			  </div>
             <div class="contacts-block">
 				<div class="contact-us">
                 <h4>Nёrds Design Studio</h4>
@@ -184,7 +186,7 @@
                 <a class="contact-btn red-btn" href="#">Напишите нам</a>
 				</div>
             </div>
-          </section>
+		  </div>
           <div class="container clearfix">
               <section class="footer-social">
                   <a class="social social-vk" href="#">VK</a>
@@ -214,67 +216,8 @@
 			</form>
           </div>
       </footer>   
-		  <script>
-			  var link = document.querySelector(".contact-btn");
-			  
-			  var popup = document.querySelector(".modal-content");
-			  var close = document.querySelector(".modal-content-close");
-			  
-			  var form = popup.querySelector("form");
-			  var username = popup.querySelector("[name=username]");
-			  var email = popup.querySelector("[name=e-mail]");
-			  var letter = popup.querySelector(".letter");
-			  var error = document.querySelector(".input-error");
-			  var defaultset = popup.querySelector (".required  [name=username]");
-			  
-			  var storage = localStorage.getItem("username");
-			  
-			  
-			  link.addEventListener("click",function(event) {
-				  event.preventDefault ();
-			      popup.classList.add("modal-content-show");
-				  
-				  if (storage) {
-					  username.value = storage;
-					  email.focus();
-				  } else {
-					  username.focus();
-				  }
-					  
-			  });
-				  close.addEventListener("click", function(event) {
-				  popup.classList.remove("modal-content-show");
-			  });
-			  
-			  form.addEventListener("submit", function(event) {
-				  if (!username.value) {
-					  event.preventDefault(); 
-					  username.classList.add("input-error") }
-				  else { if (username.classList.contains("input-error")) {
-					         username.classList.remove("input-error");
-					  } else {
-						  localStorage.setItem("username", username.value);
-					  }
-				}
-				  if (!email.value) {
-					  event.preventDefault();
-					  email.classList.add("input-error"); } 
-				else { if (email.classList.contains("input-error")) {
-					       email.classList.remove("input-error");
-				} else 
-					localStorage.setItem("e-mail", email.value);
-			  }
-			  });
-			  
-			   window.addEventListener("keydown", function(event) {
-				  if (event.keyCode === 27) {
-					  if (popup.classList.contains("modal-content-show")) {
-						  popup.classList.remove("modal-content-show");
-					  }
-				    }
-				  });
-			  
-		  </script>
+		 <script src="js/script.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc1Pi1n9UeSkEIasEaDJMWkpVN3bWqt7E"></script>
   </body>
 </html>
         

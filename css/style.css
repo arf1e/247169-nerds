@@ -523,15 +523,29 @@ footer {
     height: 635px;
     padding-top: 80px;
 }
+
+.map {
+	height: 416px;
+	width: 100%;
+}
+
+.map-wrapper {
+	height: 416px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	
+} 
     
 .footer-contacts {
-	position: relative;
     height: 416px;
 }
 
 .contacts-block {
 	position: absolute;
-	top: 54px;
+	top: 59px;
+	left: 50%;
+	margin-left: -578px;
     width: 219px;
     height: 208px;
     background-color: white;
@@ -1040,21 +1054,21 @@ form > h2 {
 }
 
 .sort-down {
-	background-position: -10px -1439px;
+	background-position: -10px -68px;
 	margin-right: 18px;
 	margin-left: 42px;
 }
 
 .sort-up {
-	background-position: -10px -1468px;
+	background-position: -10px -97px;
 }
 
 .sort-up:hover {
-	background-position: -10px -1497px;
+	background-position: -10px -126px;
 }
 
 .sort-up:active {
-	background-position: -10px -1526px;
+	background-position: -10px -155px;
 }
 /*  А нужно ли задавать стили для фильтра, который априори активен?
 .sort-down:hover {
@@ -1440,10 +1454,6 @@ label[for=name] {
 	width: 760px;
 	margin-bottom: 47px;
 }
-
-
-
-
 
 .contact-form-btn {
 	border: 0;
