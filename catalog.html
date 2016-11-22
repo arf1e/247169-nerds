@@ -33,7 +33,6 @@
               <a class="cart" href="#">Корзина</a>
            </div>
           </div>
-    </div>
         <div class="current-page">
             <div class="container">
               <h1>Магазин готовых шаблонов</h1>
@@ -96,7 +95,7 @@
                 <a href="#"> По названию </a>
               </li>
               <li>
-                <span class="sort-down current" href="#"> По убыванию </a>
+                <a class="sort-down current" href="#"> По убыванию </a>
               </li>
               <li>
                 <a class="sort-up" href="#"> По возрастанию </a>
@@ -185,7 +184,6 @@
                 <a class="contact-btn red-btn" href="#">Напишите нам</a>
 				</div>
             </div>
-            </div>
           </section>
           <div class="container clearfix">
               <section class="footer-social">
@@ -226,7 +224,8 @@
 			  var username = popup.querySelector("[name=username]");
 			  var email = popup.querySelector("[name=e-mail]");
 			  var letter = popup.querySelector(".letter");
-			  var requiredinput = popup.querySelector(".required input");
+			  var error = document.querySelector(".input-error");
+			  var defaultset = popup.querySelector (".required  [name=username]");
 			  
 			  var storage = localStorage.getItem("username");
 			  
@@ -248,14 +247,33 @@
 			  });
 			  
 			  form.addEventListener("submit", function(event) {
-				  if (!username.value || !email.value) {
-				  event.preventDefault();
-				  console.log("check");
-				  requiredinput.classList.toggle("input-error");
-				  } else {
-					  localStorage.setItem("username", username.value);
-				  }
+				  if (!username.value) {
+					  event.preventDefault(); 
+					  username.classList.add("input-error") }
+				  else { if (username.classList.contains("input-error")) {
+					         username.classList.remove("input-error");
+					  } else {
+						  localStorage.setItem("username", username.value);
+					  }
+				}
+				  if (!email.value) {
+					  event.preventDefault();
+					  email.classList.add("input-error"); } 
+				else { if (email.classList.contains("input-error")) {
+					       email.classList.remove("input-error");
+				} else 
+					localStorage.setItem("e-mail", email.value);
+			  }
 			  });
+			  
+			   window.addEventListener("keydown", function(event) {
+				  if (event.keyCode === 27) {
+					  if (popup.classList.contains("modal-content-show")) {
+						  popup.classList.remove("modal-content-show");
+					  }
+				    }
+				  });
+			  
 		  </script>
   </body>
 </html>
