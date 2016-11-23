@@ -58,7 +58,7 @@
 				  });
 
 
-				 window.onload = function initialize () { 
+		      window.onload = function initialize () { 
               var mapOptions = { 
               zoom: 17,
 		      center: new google.maps.LatLng(59.939062, 30.321300)

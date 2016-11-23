@@ -1,11 +1,10 @@
 body {
-  font-size: 16px;
-  font-family: "Roboto", "Arial", sans-serif;
-  line-height: 1.5em;
-  color: #283136;
-  min-width: 1200px;
-  margin: 0 auto;
-    
+	font-size: 16px;
+	font-family: "Roboto", "Arial", sans-serif;
+	line-height: 1.5em;
+	color: #283136;
+	min-width: 1200px;
+	margin: 0 auto; 
 }
 
 h1 {
@@ -40,7 +39,6 @@ h2 {
     float:left;
     height: 20px;
     min-width: 460px;
-	
 }
 
 .main-navigation ul {
@@ -67,7 +65,6 @@ h2 {
 	text-transform: uppercase;
 	font-weight: bold;
 	padding-bottom: 9px;
-  
 }
 
 .main-navigation a:hover {
@@ -172,7 +169,6 @@ a .header-logo:active {
 #slide-btn-1:checked ~ .slideswitcher label[for=slide-btn-1]::before, 
 #slide-btn-2:checked ~ .slideswitcher label[for=slide-btn-2]::before, 
 #slide-btn-3:checked ~ .slideswitcher label[for=slide-btn-3]::before {
-	
 	position: absolute;
 	content: "";
 	width: 4px;
@@ -200,7 +196,8 @@ a .header-logo:active {
 }
 
 
-.slide h1 {
+.slide h2 {
+	font-size: 55px;
     width: 540px;
 	white-space: pre-wrap;
     height: 120px;
@@ -234,9 +231,9 @@ a .header-logo:active {
 }
         
 .clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .products {
@@ -352,9 +349,9 @@ a .header-logo:active {
 }
 
 .about-us {
-  width: 690px;
-  height: 100px;
-  margin-bottom: 30px;
+	width: 690px;
+	height: 100px;
+	margin-bottom: 30px;
 }
 
 
@@ -501,22 +498,22 @@ h2 span {
 }
 
 .trusted-brand { 
-display: inline-block; 
-vertical-align: middle; 
-width: 25%; 
-text-align: center; 
-position: relative; 
+	display: inline-block; 
+	vertical-align: middle; 
+	width: 25%; 
+	text-align: center; 
+	position: relative; 
 } 
 
 .trusted-brand:not(:last-child)::before { 
-content: ""; 
-height: 50px; 
-width: 2px; 
-background-color: #eeeeee; 
-display: block; 
-position: absolute; 
-right: 0; 
-top: calc(50% - 25px); 
+	content: ""; 
+	height: 50px; 
+	width: 2px; 
+	background-color: #eeeeee; 
+	display: block; 
+	position: absolute; 
+	right: 0; 
+	top: calc(50% - 25px); 
 }
 
 footer {
@@ -567,17 +564,17 @@ footer {
 }
 
 .contact-us span {
-	margin: 0;
+    margin: 0;
 	padding: 0;
 	letter-spacing: 0.14px;
 }
 
 .contact-btn {
+    width: 220px;
+	height: 3px;
 	margin: 0;
 	padding: 0;
 	display: block;
-	width: 220px;
-	height: 3px;
 	border-radius: 2px;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -625,6 +622,7 @@ footer {
 
 .social:hover {
 	background-color: #e74246;
+	-webkit-transition: 0.25s;
 	transition: 0.25s;
 }
 
@@ -1127,6 +1125,7 @@ form > h2 {
 	background: #eeeeee;
 	border-radius: 2px;
 	vertical-align: middle;
+    color: black;
 }
 
 .pageswitcher .active {
@@ -1302,7 +1301,8 @@ form > h2 {
 
 .modal-content-show {
 	display: block;
-	animation: bounce 0.6s;
+	-webkit-animation: bounce 0.6s;
+	        animation: bounce 0.6s;
 }
 
 .modal-content h2 {
@@ -1328,7 +1328,8 @@ form > h2 {
 	width: 25px;
 	height: 5px;
 	background-color: rgba(251, 86, 90, 0.3);
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
 	top: 8px;
 	left: -2px;
 	
@@ -1340,7 +1341,8 @@ form > h2 {
 	width: 25px;
 	height: 5px;
 	background-color: rgba(251, 86, 90, 0.3);
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 	top: 8px;
 	left: -2px;
 }
@@ -1416,7 +1418,8 @@ label[for=name] {
 }
 
 .input-error {
-	animation: shake 0.5s;
+	-webkit-animation: shake 0.5s;
+	        animation: shake 0.5s;
 	border: 2px solid #e74246;
 	color: #e74246;
 }
@@ -1465,36 +1468,87 @@ label[for=name] {
 	background-color: #fb565a;
 }
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
   0%   {
-    transform: translateY(-2000px);
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
   }
   70%  {
-    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
   }
   90%  {
-    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
+}
+
+@keyframes bounce {
+  0%   {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+  70%  {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  90%  {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
+	0% {
+		-webkit-transform: translateX(-10px);
+		        transform: translateX(-10px);
+	}
+	25% {
+		-webkit-transform: translateX(10px);
+		        transform: translateX(10px);
+	}
+	50% {
+		-webkit-transform: translateX(-10px);
+		        transform: translateX(-10px);
+	}
+	75% {
+		-webkit-transform: translateX(10px);
+		        transform: translateX(10px);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		        transform: translateX(0);
+	}
 }
 
 @keyframes shake {
 	0% {
-		transform: translateX(-10px);
+		-webkit-transform: translateX(-10px);
+		        transform: translateX(-10px);
 	}
 	25% {
-		transform: translateX(10px);
+		-webkit-transform: translateX(10px);
+		        transform: translateX(10px);
 	}
 	50% {
-		transform: translateX(-10px);
+		-webkit-transform: translateX(-10px);
+		        transform: translateX(-10px);
 	}
 	75% {
-		transform: translateX(10px);
+		-webkit-transform: translateX(10px);
+		        transform: translateX(10px);
 	}
 	100% {
-		transform: translateX(0);
+		-webkit-transform: translateX(0);
+		        transform: translateX(0);
 	}
 }
 
@@ -1508,7 +1562,6 @@ label[for=name] {
 
 
 
-
     
 
 
@@ -1553,7 +1606,6 @@ label[for=name] {
 
     
     
-
 
 
 
