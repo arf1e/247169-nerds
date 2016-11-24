@@ -74,4 +74,3 @@ window.onload = function initialize() {
     icon: image
   });
 }
-google.maps.event.addDomListener(window, 'load', initialize);
