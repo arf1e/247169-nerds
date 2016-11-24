@@ -202,11 +202,11 @@ a .header-logo:active {
 }
 
 .slide-3 h2 {
-  width: 500px;
+  width: 420px;
 }
 
 .slide-3 .description {
-  width: 360px;
+  width: 346px;
 }
 
 .slider input {
@@ -298,11 +298,11 @@ a .header-logo:active {
 }
 
 .websites .description {
-  width: 260px;
+  width: 250px;
 }
 
 .presentations .description {
-  width: 260px;
+  width: 250px;
 }
 
 .product-preview:not(:nth-child(3n)) {
