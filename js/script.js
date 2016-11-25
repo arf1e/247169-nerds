@@ -6,9 +6,6 @@ var close = document.querySelector(".modal-content-close");
 var form = popup.querySelector("form");
 var username = popup.querySelector("[name=username]");
 var email = popup.querySelector("[name=e-mail]");
-var letter = popup.querySelector(".letter");
-var error = document.querySelector(".input-error");
-var defaultset = popup.querySelector(".required  [name=username]");
 
 var storage = localStorage.getItem("username");
 
@@ -74,3 +71,5 @@ window.onload = function initialize() {
     icon: image
   });
 }
+
+google.maps.event.addDomListener(window, 'load', initialize);

@@ -1380,8 +1380,8 @@ main h2 {
 
 .modal-content-show {
   display: block;
-  -webkit-animation: bounce 0.6s;
-  animation: bounce 0.6s;
+  -webkit-animation: bounce .6s;
+  animation: bounce .6s;
 }
 
 .modal-content h2 {
@@ -1492,8 +1492,8 @@ label[for=name] {
 }
 
 .input-error {
-  -webkit-animation: shake 0.5s;
-  animation: shake 0.5s;
+  -webkit-animation: shake .5s;
+  animation: shake .5s;
   border: 2px solid #e74246;
   color: #e74246;
 }
