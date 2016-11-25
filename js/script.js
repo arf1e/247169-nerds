@@ -6,7 +6,10 @@ window.onload = function () {
   var form = popup.querySelector("form");
   var username = popup.querySelector("[name=username]");
   var email = popup.querySelector("[name=e-mail]");
-  var storage = localStorage.getItem("username");
+  
+  if (localStorage) {
+    var storage = localStorage.getItem("username");
+  }
 
   link.addEventListener("click", function (event) {
     event.preventDefault();
