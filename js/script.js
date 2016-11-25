@@ -6,14 +6,14 @@ window.onload = function () {
   var form = popup.querySelector("form");
   var username = popup.querySelector("[name=username]");
   var email = popup.querySelector("[name=e-mail]");
-  
-  if (localStorage) {
-    var storage = localStorage.getItem("username");
-  }
 
   link.addEventListener("click", function (event) {
     event.preventDefault();
     popup.classList.add("modal-content-show");
+    
+    if (localStorage) {
+      var storage = localStorage.getItem("username");
+    }
     
     if (storage) {
       username.value = storage;
